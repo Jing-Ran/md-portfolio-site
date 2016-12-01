@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Mastering CSS: Portfolio Site">
+  <title>Jing Ran - Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/icon_style.css">
+</head>
+<body>
+  <header class="nav">
+    <p class="nav__name">
+      <span class="nav__name-first">Jing</span>
+      <span class="nav__name-last">Ran</span>
+    </p>
+
+    <nav class="nav__menu">
+      <ul>
+        <li class="nav__menu__item" tabindex="0">
+          <a href="#about">about</a>
+        </li>
+        <li class="nav__menu__item" tabindex="0">
+          <a href="#projects">projects</a>
+        </li>
+        <li class="nav__menu__item" tabindex="0">
+          <a href="#skills">skills</a>
+        </li>
+        <li class="nav__menu__item" tabindex="0">
+          <a href="#contact">contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav__search">
+      <input type="text" id="search_input" required>
+      <label for="search_input" class="nav__search__label">search</label>
+
+      <label for="search_modal-checkbox" class="nav__search__label-modal">
+        <!-- a magnifying glass icon is needed -->
+        <span class="fa fa-search fa-lg nav__search__icon"></span>
+      </label>
+    </div>
+  </header>
+
+  <input type="checkbox" id="search_modal-checkbox">
+  <!-- search modal -->
+  <div class="nav__search-modal">
+    <div>
+      <!-- a close icon may be needed here -->
+      <label for="search_modal-checkbox">
+        <span class="fa fa-2x fa-close"></span>
+      </label>
+      <p>Search Temporarily Disabled</p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    <h3 class="section__title">About</h3>
+    <div class="section__intro">
+      <h1>Hello there.</h1>
+      <p>I'm Jing, a <strong>frontend developer</strong> in progress.</p>
+      <p>I work in marketing. Part of my job is helping clients redesign web pages from a marketing perspective. However, as the complexity of the work increased, basic HTML and CSS knowledge was required. Then, I quickly discovered my passion in web development after taking some HTML/CSS courses online. I'm now a student of <a href="https://learn.moderndeveloper.com/" target="_blank">Modern Developer</a>. When I finish the frontend path, I'll continue pursuing my career as a <strong>fullstack developer</strong>.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Projects section -->
+  <section id="projects" class="section">
+    <h3 class="section__title">Projects</h3>
+    <p class="section__intro">I've built some web components and projects while studying at Modern Developer. More projects are coming. This section will be updated constantly. Stay tuned.</p>
+    <div class="section__content section__content-projects">
+      <input type="radio" name="tabs" value="pj1" id="pj-1" checked>
+      <input type="radio" name="tabs" value="pj2" id="pj-2">
+      <input type="radio" name="tabs" value="pj3" id="pj-3">
+      <input type="radio" name="tabs" value="pj4" id="pj-4">
+      <input type="radio" name="tabs" value="pj5" id="pj-5">
+      <input type="radio" name="tabs" value="pj6" id="pj-6">
+      <input type="radio" name="tabs" value="pj7" id="pj-7">
+      <input type="radio" name="tabs" value="pj8" id="pj-8">
+
+      <div class="projects__nav">
+        <label for="pj-1">Buttons</label>
+        <label for="pj-2">Product Listing Page</label>
+        <label for="pj-3">Forms</label>
+        <label for="pj-4">Calculator</label>
+        <label for="pj-5">Business Card</label>
+        <label for="pj-6">Tab Component</label>
+        <label for="pj-7">Accordion</label>
+        <label for="pj-8">Image Carousel</label>
+      </div>
+
+      <div class="projects__tabs">
+        <!-- Project 1 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj1" id="pj1-slide1" checked>
+            <input type="radio" name="slides-pj1" id="pj1-slide2">
+            <input type="radio" name="slides-pj1" id="pj1-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj1-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj1-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj1-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj1-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj1-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj1-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/btn.png" class="carousel__slide-1">
+              <img src="images/btn.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj1-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj1-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj1-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>Simple and reusable button components.</p>
+            <a href="http://jing-ran.github.io/web-components/components/buttons/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/web-components/tree/master/components/buttons" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj2" id="pj2-slide1" checked>
+            <input type="radio" name="slides-pj2" id="pj2-slide2">
+            <input type="radio" name="slides-pj2" id="pj2-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj2-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj2-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj2-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj2-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj2-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj2-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/product.png" class="carousel__slide-1">
+              <img src="images/product.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj2-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj2-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj2-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
+            <p>A functional shopping page mock up. It can calculate and update prices by using vanilla JavaScript.</p>
+            <a href="https://jing-ran.github.io/md-product-listing/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-product-listing" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj3" id="pj3-slide1" checked>
+            <input type="radio" name="slides-pj3" id="pj3-slide2">
+            <input type="radio" name="slides-pj3" id="pj3-slide3">
+            <input type="radio" name="slides-pj3" id="pj3-slide4">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj3-slide4" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj3-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj3-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj3-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj3-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj3-slide4" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj3-slide3" class="carousel__nav-prev carousel__nav4">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj3-slide1" class="carousel__nav-next carousel__nav4">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/form-card-info.gif" class="carousel__slide-1">
+              <img src="images/form-color.gif" class="carousel__slide-2">
+              <img src="images/form-schedule.png" class="carousel__slide-3">
+              <img src="images/form-login.gif" class="carousel__slide-4">
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj3-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj3-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj3-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj3-slide4" class="carousel__nav-dot4">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
+            <p>This project contains several forms. They are structured using HTML and CSS, and validated with JavaScript. Visit my GitHub for more of them.</p>
+            <a href="#" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-forms" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj4" id="pj4-slide1" checked>
+            <input type="radio" name="slides-pj4" id="pj4-slide2">
+            <input type="radio" name="slides-pj4" id="pj4-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj4-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj4-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj4-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj4-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj4-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj4-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/calculator.png" class="carousel__slide-1"
+                   style="width: 373px; height: auto">
+              <img src="images/calculator.gif" class="carousel__slide-2"
+                   style="width: 373px; height: auto">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj4-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj4-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj4-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>This calculator is designed based on my very first calculator when I was a kid.</p>
+            <a href="https://jing-ran.github.io/md-calculator/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-calculator" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj5" id="pj5-slide1" checked>
+            <input type="radio" name="slides-pj5" id="pj5-slide2">
+            <input type="radio" name="slides-pj5" id="pj5-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj5-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj5-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj5-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj5-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj5-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj5-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/biz-card.png" class="carousel__slide-1">
+              <img src="images/biz-card.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj5-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj5-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj5-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>This Modern Developer Student business card is three-dimensional and flippable. It's build only with HTML and CSS.</p>
+            <a href="https://jing-ran.github.io/md-business-card/my-card/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-business-card/tree/master/my-card" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj6" id="pj6-slide1" checked>
+            <input type="radio" name="slides-pj6" id="pj6-slide2">
+            <input type="radio" name="slides-pj6" id="pj6-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj6-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj6-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj6-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj6-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj6-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj6-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/tabs.png" class="carousel__slide-1">
+              <img src="images/tabs.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj6-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj6-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj6-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>A simple and reusable tab component built with pure HTML and CSS.</p>
+            <a href="https://jing-ran.github.io/md-tabs-component/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-tabs-component" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj7" id="pj7-slide1" checked>
+            <input type="radio" name="slides-pj7" id="pj7-slide2">
+            <input type="radio" name="slides-pj7" id="pj7-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj7-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj7-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj7-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj7-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj7-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj7-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/accordion.png" class="carousel__slide-1">
+              <img src="images/accordion.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj7-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj7-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj7-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>A simple and reusable accordion component built with pure HTML and CSS.</p>
+            <a href="https://jing-ran.github.io/md-accordion/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-accordion" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="projects__tabs__content">
+          <!-- Project Carousel -->
+          <div class="carousel">
+            <input type="radio" name="slides-pj8" id="pj8-slide1" checked>
+            <input type="radio" name="slides-pj8" id="pj8-slide2">
+            <input type="radio" name="slides-pj8" id="pj8-slide3">
+
+            <div class="carousel__nav-arrows">
+              <label for="pj8-slide3" class="carousel__nav-prev carousel__nav1">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj8-slide2" class="carousel__nav-next carousel__nav1">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj8-slide1" class="carousel__nav-prev carousel__nav2">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj8-slide3" class="carousel__nav-next carousel__nav2">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+
+              <label for="pj8-slide2" class="carousel__nav-prev carousel__nav3">
+                <span class="fa fa-angle-left fa-2x"></span>
+              </label>
+              <label for="pj8-slide1" class="carousel__nav-next carousel__nav3">
+                <span class="fa fa-angle-right fa-2x"></span>
+              </label>
+            </div>
+
+            <div class="carousel__slides">
+              <img src="images/img-carousel.png" class="carousel__slide-1">
+              <img src="images/img-carousel.gif" class="carousel__slide-2">
+              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+            </div>
+
+            <div class="carousel__nav-dots">
+              <label for="pj8-slide1" class="carousel__nav-dot1">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj8-slide2" class="carousel__nav-dot2">
+                <span class="fa fa-circle"></span>
+              </label>
+              <label for="pj8-slide3" class="carousel__nav-dot3">
+                <span class="fa fa-circle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="projects__tabs__content__intro">
+            <h4>Technologies: HTML5 and CSS3</h4>
+            <p>A reusable image carousel built with pure HTML and CSS.</p>
+            <a href="https://jing-ran.github.io/md-image-carousel/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
+            <a href="https://github.com/Jing-Ran/md-image-carousel" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Skills section -->
+  <section id="skills" class="section">
+    <h3 class="section__title">Skills</h3>
+    <p class="section__intro">The graphs below show the technologies and skills I've learned and been improved after attending Modern Developer's Frontend Path.</p>
+    <div class="section__content section__content-skills">
+      <div class="skills__chart-line">
+        <div class="chart-line--frontend">90%</div>
+        <div class="chart-line--backend">10%</div>
+      </div>
+
+      <div class="skills__chart-bar">
+        <div class="chart-bar--frontend">
+          <h4>Frontend Development</h4>
+          <div class="chart-bar__container">
+            <ul class="chart-bar__y">
+              <li class="chart-bar__y__label">Expert</li>
+              <li class="chart-bar__y__label">Proficient</li>
+              <li class="chart-bar__y__label">Competent</li>
+              <li class="chart-bar__y__label">Learning</li>
+            </ul>
+
+            <div class="chart-bar__graph">
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">JavaScript</span>
+                <span class="tooltip">Have learned for several months</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-c">
+                <span class="category">HTML/CSS</span>
+                <span class="tooltip">Have some experience</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-l-low">
+                <span class="category">ReactJS</span>
+                <span class="tooltip">Looking forward to learning it</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">jQuery</span>
+                <span class="tooltip">Have learned for several months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-bar--backend">
+          <h4>Backend Development</h4>
+          <div class="chart-bar__container">
+            <ul class="chart-bar__y">
+              <li class="chart-bar__y__label">Expert</li>
+              <li class="chart-bar__y__label">Proficient</li>
+              <li class="chart-bar__y__label">Competent</li>
+              <li class="chart-bar__y__label">Learning</li>
+            </ul>
+
+            <div class="chart-bar__graph">
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">JavaScript</span>
+                <span class="tooltip">Have learned for several months</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-c">
+                <span class="category">HTML/CSS</span>
+                <span class="tooltip">Have some experience</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-l-low">
+                <span class="category">ReactJS</span>
+                <span class="tooltip">Looking forward to learning it</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">jQuery</span>
+                <span class="tooltip">Have learned for several months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-bar--other">
+          <h4>Other Skills</h4>
+          <div class="chart-bar__container">
+            <ul class="chart-bar__y">
+              <li class="chart-bar__y__label">Expert</li>
+              <li class="chart-bar__y__label">Proficient</li>
+              <li class="chart-bar__y__label">Competent</li>
+              <li class="chart-bar__y__label">Learning</li>
+            </ul>
+
+            <div class="chart-bar__graph">
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">Written Communication</span>
+                <span class="tooltip">Practicing and improving</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-p">
+                <span class="category">Problem Solving</span>
+                <span class="tooltip">Love to solve problems</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-c">
+                <span class="category">Project Management</span>
+                <span class="tooltip">Practicing and improving</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-e">
+                <span class="category">Research</span>
+                <span class="tooltip">Part of my everyday job</span>
+              </div>
+
+              <div class="chart-bar__graph__bar level-l">
+                <span class="category">Public Speaking</span>
+                <span class="tooltip">Practicing and improving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Contact section-->
+  <section id="contact" class="section">
+    <h3 class="section__title">Contact</h3>
+    <p class="section__intro">Let's get in touch!</p>
+    <div class="section__content section__content-contact">
+      <div class="card-wrapper">
+        <input type="checkbox" name="flip-checkbox" id="flip-checkbox">
+        <div class="card">
+          <!-- card front-->
+          <div class="card__front">
+            <label for="flip-checkbox" class="flip__label">
+              <span class="icon-turn"></span>
+            </label>
+            <header class="card__front--header">
+              <h1>Jing Ran</h1>
+              <h4>Student at Modern Developer</h4>
+            </header>
+
+            <div class="card__front--body">
+              <p>Enthusiastic frontend developer in progress at Modern Developer.</p>
+              <div class="card__front--body__contact">
+                <p><span class="fa fa-map-marker"></span>Located in Massachusetts, US</p>
+                <p><span class="fa fa-envelope"></span><a href="mailto:jingran.mavis@gmail.com">jingran.mavis@gmail.com</a></p>
+              </div>
+            </div>
+
+            <footer class="card__front--footer">
+              <div class="card__front--footer__enc">
+                <img src="images/enc.png" alt="encyclopedia">
+                <div class="card__front--footer__enc__text">
+                  <p>Jing Ran</p>
+                  <p><span>on </span><a href="https://encyclopedia.moderndeveloper.com/" target="_blank">Encyclopedia.MD</a></p>
+                </div>
+              </div>
+
+              <div class="card__front--footer__social">
+                <a href="https://github.com/Jing-Ran" target="_blank">
+                  <img src="images/github.png" alt="github">
+                </a>
+                <a href="#?" target="_blank">
+                  <img src="images/linkedin.png" alt="linkedin">
+                </a>
+              </div>
+            </footer>
+
+          </div>
+
+          <!--card back-->
+          <div class="card__back">
+            <label for="flip-checkbox" class="flip__label"><span
+                class="icon-turn"></span></label>
+            <p>Jing Ran</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <span class="fa fa-copyright"></span>
+    <span>2016 Jing Ran</span>
+  </footer>
+</body>
