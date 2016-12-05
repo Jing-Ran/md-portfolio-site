@@ -38,9 +38,8 @@
       <input type="text" id="search_input" required>
       <label for="search_input" class="nav__search__label">search</label>
 
-      <label for="search_modal-checkbox" class="nav__search__label-modal">
-        <!-- a magnifying glass icon is needed -->
-        <span class="fa fa-search fa-lg nav__search__icon"></span>
+      <label for="search_modal-checkbox" class="nav__search__label-modal" aria-label="search">
+        <span class="fa fa-search fa-lg nav__search__icon" aria-hidden="true"></span>
       </label>
     </div>
   </header>
@@ -50,8 +49,8 @@
   <div class="nav__search-modal">
     <div>
       <!-- a close icon may be needed here -->
-      <label for="search_modal-checkbox">
-        <span class="fa fa-2x fa-close"></span>
+      <label for="search_modal-checkbox" aria-label="close">
+        <span class="fa fa-2x fa-close" aria-hidden="true"></span>
       </label>
       <p>Search Temporarily Disabled</p>
     </div>
@@ -104,24 +103,30 @@
             <input type="radio" name="slides-pj1" id="pj1-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj1-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj1-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj1-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj1-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj1-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj1-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj1-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj1-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj1-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj1-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj1-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj1-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -129,18 +134,23 @@
             <div class="carousel__slides">
               <img src="images/btn.png" class="carousel__slide-1">
               <img src="images/btn.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj1-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj1-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj1-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj1-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj1-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj1-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -148,8 +158,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>Simple and reusable button components.</p>
-            <a href="http://jing-ran.github.io/web-components/components/buttons/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/web-components/tree/master/components/buttons" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="http://jing-ran.github.io/web-components/components/buttons/" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/web-components/tree/master/components/buttons" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -162,24 +178,30 @@
             <input type="radio" name="slides-pj2" id="pj2-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj2-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj2-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj2-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj2-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj2-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj2-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj2-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj2-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj2-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj2-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj2-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj2-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -187,18 +209,23 @@
             <div class="carousel__slides">
               <img src="images/product.png" class="carousel__slide-1">
               <img src="images/product.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj2-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj2-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj2-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj2-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj2-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj2-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -206,8 +233,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
             <p>A functional shopping page mock up. It can calculate and update prices by using vanilla JavaScript.</p>
-            <a href="https://jing-ran.github.io/md-product-listing/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-product-listing" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-product-listing/" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-product-listing" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -221,31 +254,39 @@
             <input type="radio" name="slides-pj3" id="pj3-slide4">
 
             <div class="carousel__nav-arrows">
-              <label for="pj3-slide4" class="carousel__nav-prev carousel__nav1">
+              <label for="pj3-slide4" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj3-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj3-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj3-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj3-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj3-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj3-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj3-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj3-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj3-slide4" class="carousel__nav-next carousel__nav3">
+              <label for="pj3-slide4" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj3-slide3" class="carousel__nav-prev carousel__nav4">
+              <label for="pj3-slide3" class="carousel__nav-prev carousel__nav4"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj3-slide1" class="carousel__nav-next carousel__nav4">
+              <label for="pj3-slide1" class="carousel__nav-next carousel__nav4"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -258,17 +299,20 @@
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj3-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj3-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj3-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj3-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj3-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj3-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
               <label for="pj3-slide4" class="carousel__nav-dot4">
-                <span class="fa fa-circle"></span>
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -276,8 +320,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
             <p>This project contains several forms. They are structured using HTML and CSS, and validated with JavaScript. Visit my GitHub for more of them.</p>
-            <a href="#" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-forms" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="#" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-forms" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -290,24 +340,30 @@
             <input type="radio" name="slides-pj4" id="pj4-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj4-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj4-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj4-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj4-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj4-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj4-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj4-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj4-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj4-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj4-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj4-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj4-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -317,18 +373,23 @@
                    style="width: 373px; height: auto">
               <img src="images/calculator.gif" class="carousel__slide-2"
                    style="width: 373px; height: auto">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj4-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj4-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj4-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj4-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj4-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj4-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -336,8 +397,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>This calculator is designed based on my very first calculator when I was a kid.</p>
-            <a href="https://jing-ran.github.io/md-calculator/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-calculator" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-calculator/" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-calculator" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -350,24 +417,30 @@
             <input type="radio" name="slides-pj5" id="pj5-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj5-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj5-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj5-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj5-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj5-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj5-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj5-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj5-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj5-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj5-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj5-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj5-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -375,18 +448,23 @@
             <div class="carousel__slides">
               <img src="images/biz-card.png" class="carousel__slide-1">
               <img src="images/biz-card.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj5-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj5-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj5-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj5-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj5-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj5-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -394,8 +472,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>This Modern Developer Student business card is three-dimensional and flippable. It's build only with HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-business-card/my-card/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-business-card/tree/master/my-card" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-business-card/my-card/" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-business-card/tree/master/my-card" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -408,24 +492,30 @@
             <input type="radio" name="slides-pj6" id="pj6-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj6-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj6-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj6-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj6-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj6-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj6-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj6-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj6-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj6-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj6-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj6-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj6-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -433,18 +523,23 @@
             <div class="carousel__slides">
               <img src="images/tabs.png" class="carousel__slide-1">
               <img src="images/tabs.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj6-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj6-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj6-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj6-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj6-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj6-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -452,8 +547,16 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A simple and reusable tab component built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-tabs-component/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-tabs-component" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-tabs-component/"
+               target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-tabs-component"
+               target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -466,24 +569,30 @@
             <input type="radio" name="slides-pj7" id="pj7-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj7-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj7-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj7-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj7-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj7-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj7-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj7-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj7-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj7-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj7-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj7-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj7-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -491,18 +600,23 @@
             <div class="carousel__slides">
               <img src="images/accordion.png" class="carousel__slide-1">
               <img src="images/accordion.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj7-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj7-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj7-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj7-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj7-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj7-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -510,8 +624,14 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A simple and reusable accordion component built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-accordion/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-accordion" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-accordion/" target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-accordion" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -524,24 +644,30 @@
             <input type="radio" name="slides-pj8" id="pj8-slide3">
 
             <div class="carousel__nav-arrows">
-              <label for="pj8-slide3" class="carousel__nav-prev carousel__nav1">
+              <label for="pj8-slide3" class="carousel__nav-prev carousel__nav1"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj8-slide2" class="carousel__nav-next carousel__nav1">
+              <label for="pj8-slide2" class="carousel__nav-next carousel__nav1"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj8-slide1" class="carousel__nav-prev carousel__nav2">
+              <label for="pj8-slide1" class="carousel__nav-prev carousel__nav2"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj8-slide3" class="carousel__nav-next carousel__nav2">
+              <label for="pj8-slide3" class="carousel__nav-next carousel__nav2"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
 
-              <label for="pj8-slide2" class="carousel__nav-prev carousel__nav3">
+              <label for="pj8-slide2" class="carousel__nav-prev carousel__nav3"
+                     aria-label="previous slide">
                 <span class="fa fa-angle-left fa-2x"></span>
               </label>
-              <label for="pj8-slide1" class="carousel__nav-next carousel__nav3">
+              <label for="pj8-slide1" class="carousel__nav-next carousel__nav3"
+                     aria-label="next slide">
                 <span class="fa fa-angle-right fa-2x"></span>
               </label>
             </div>
@@ -549,18 +675,23 @@
             <div class="carousel__slides">
               <img src="images/img-carousel.png" class="carousel__slide-1">
               <img src="images/img-carousel.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">Live demo goes here</div>
+              <div class="carousel__slide-3 carousel__slide-live">
+                Live demo goes here
+              </div>
             </div>
 
             <div class="carousel__nav-dots">
-              <label for="pj8-slide1" class="carousel__nav-dot1">
-                <span class="fa fa-circle"></span>
+              <label for="pj8-slide1" class="carousel__nav-dot1"
+                     aria-label="slide one">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj8-slide2" class="carousel__nav-dot2">
-                <span class="fa fa-circle"></span>
+              <label for="pj8-slide2" class="carousel__nav-dot2"
+                     aria-label="slide two">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
-              <label for="pj8-slide3" class="carousel__nav-dot3">
-                <span class="fa fa-circle"></span>
+              <label for="pj8-slide3" class="carousel__nav-dot3"
+                     aria-label="slide three">
+                <span class="fa fa-circle" aria-hidden="true"></span>
               </label>
             </div>
           </div>
@@ -568,8 +699,16 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A reusable image carousel built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-image-carousel/" target="_blank"><span class="fa fa-link"></span>View Demo</a>
-            <a href="https://github.com/Jing-Ran/md-image-carousel" target="_blank"><span class="fa fa-github"></span>View Source on GitHub</a>
+            <a href="https://jing-ran.github.io/md-image-carousel/"
+               target="_blank">
+              <span class="fa fa-link" aria-hidden="true"></span>
+              View Demo
+            </a>
+            <a href="https://github.com/Jing-Ran/md-image-carousel"
+               target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              View Source on GitHub
+            </a>
           </div>
         </div>
 
@@ -585,8 +724,8 @@
     <p class="section__intro">The graphs below show the technologies and skills I've learned and been improved after attending Modern Developer's Frontend Path.</p>
     <div class="section__content section__content-skills">
       <div class="skills__chart-line">
-        <div class="chart-line--frontend">90%</div>
-        <div class="chart-line--backend">10%</div>
+        <div class="chart-line--frontend" title="frontend development">90%</div>
+        <div class="chart-line--backend" title="backend development">10%</div>
       </div>
 
       <div class="skills__chart-bar">
@@ -712,8 +851,9 @@
         <div class="card">
           <!-- card front-->
           <div class="card__front">
-            <label for="flip-checkbox" class="flip__label">
-              <span class="icon-turn"></span>
+            <label for="flip-checkbox" class="flip__label"
+                   aria-label="Flip business card">
+              <span class="icon-turn" aria-hidden="true"></span>
             </label>
             <header class="card__front--header">
               <h1>Jing Ran</h1>
@@ -723,8 +863,16 @@
             <div class="card__front--body">
               <p>Enthusiastic frontend developer in progress at Modern Developer.</p>
               <div class="card__front--body__contact">
-                <p><span class="fa fa-map-marker"></span>Located in Massachusetts, US</p>
-                <p><span class="fa fa-envelope"></span><a href="mailto:jingran.mavis@gmail.com">jingran.mavis@gmail.com</a></p>
+                <p>
+                  <span class="fa fa-map-marker" aria-hidden="true"></span>
+                  <span class="sr-only">Location:</span>
+                  Located in Massachusetts, US
+                </p>
+                <p>
+                  <span class="fa fa-envelope" aria-hidden="true"></span>
+                  <span class="sr-only">Email:</span>
+                  <a href="mailto:jingran.mavis@gmail.com">jingran.mavis@gmail.com</a>
+                </p>
               </div>
             </div>
 
@@ -733,7 +881,11 @@
                 <img src="images/enc.png" alt="encyclopedia">
                 <div class="card__front--footer__enc__text">
                   <p>Jing Ran</p>
-                  <p><span>on </span><a href="https://encyclopedia.moderndeveloper.com/" target="_blank">Encyclopedia.MD</a></p>
+                  <p>
+                    <span>on </span>
+                    <a href="https://encyclopedia.moderndeveloper.com/"
+                       target="_blank">Encyclopedia.MD</a>
+                  </p>
                 </div>
               </div>
 
@@ -751,8 +903,10 @@
 
           <!--card back-->
           <div class="card__back">
-            <label for="flip-checkbox" class="flip__label"><span
-                class="icon-turn"></span></label>
+            <label for="flip-checkbox" class="flip__label"
+                   aria-label="Flip business card">
+              <span class="icon-turn" aria-hidden="true"></span>
+            </label>
             <p>Jing Ran</p>
           </div>
         </div>

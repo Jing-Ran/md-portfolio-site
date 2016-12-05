@@ -217,7 +217,7 @@ a {
   -o-transform: translateY(-100%) scale(0);
   transform: translateY(-100%) scale(0);
   /* TODO: fire on page load, need JS?*/
-  /* SOLVED: by adding an empty file to html*/
+  /* SOLVED: by adding an empty JS file to html*/
 
   -webkit-transition: transform .5s;
   -moz-transition: transform .5s;
@@ -664,10 +664,6 @@ img[class^='carousel__slide-'],
   color: #4AB29B;
 }
 
-.projects__tabs__content__intro a span {
-  margin-right: 5px;
-}
-
 
 /* Skills section */
 /* line chart */
@@ -1079,7 +1075,7 @@ div[class^='chart-bar--'] h4 {
 }
 
 .card__front--body__contact span {
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 .card__front--footer__enc {
