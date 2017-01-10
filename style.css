@@ -106,10 +106,10 @@ a {
   -moz-border-radius: 3px;
   border-radius: 3px;
 
-  -webkit-transition: color .3s, background-color .3s;
-  -moz-transition: color .3s, background-color .3s;
-  -o-transition: color .3s, background-color .3s;
-  transition: color .3s, background-color .3s;
+  -webkit-transition: color .25s, background-color .25s;
+  -moz-transition: color .25s, background-color .25s;
+  -o-transition: color .25s, background-color .25s;
+  transition: color .25s, background-color .25s;
 }
 
 
@@ -200,10 +200,10 @@ a {
   background-color: rgba(0,0,0,0.5);
   z-index: 10;
 
-  -webkit-transition: visibility .3s, opacity .3s;
-  -moz-transition: visibility .3s, opacity .3s;
-  -o-transition: visibility .3s, opacity .3s;
-  transition: visibility .3s, opacity .3s;
+  -webkit-transition: visibility .4s, opacity .4s;
+  -moz-transition: visibility .4s, opacity .4s;
+  -o-transition: visibility .4s, opacity .4s;
+  transition: visibility .4s, opacity .4s;
 }
 
 .search-modal__inner {
@@ -225,10 +225,10 @@ a {
   /* TODO: fire on page load, need JS?*/
   /* SOLVED: by adding an empty JS file to html*/
 
-  -webkit-transition: transform .25s;
-  -moz-transition: transform .25s;
-  -o-transition: transform .25s;
-  transition: transform .25s;
+  -webkit-transition: transform .4s;
+  -moz-transition: transform .4s;
+  -o-transition: transform .4s;
+  transition: transform .4s;
 }
 
 #search-modal-checkbox:checked ~ .search-modal--filter {
@@ -1218,11 +1218,21 @@ div[class^='chart-bar--'] h4 {
 
 
 @media all and (max-width: 1024px){
+  .nav,
+  .footer {
+    background-color: #EFEBE9;
+  }
+
   .nav {
    padding-left: 1.3em;
    padding-right: 1.3em;
   }
 
+  .nav__name {
+    font-size: 1.4em;
+  }
+
+  .nav__menu,
   .nav__search {
     font-size: 0.9em;
   }
@@ -1244,6 +1254,11 @@ div[class^='chart-bar--'] h4 {
 }
 
 @media all and (max-width: 768px){
+  .nav,
+  .footer {
+    background-color: #E8F5E9;
+  }
+
   /* off-screen nav menu */
 
 
@@ -1267,6 +1282,11 @@ div[class^='chart-bar--'] h4 {
 }
 
 @media all and (max-width: 360px){
+  .nav,
+  .footer {
+    background-color: #F1F8E9;
+  }
+
   .search-modal--filter {
     font-size: 0.85em;
   }
