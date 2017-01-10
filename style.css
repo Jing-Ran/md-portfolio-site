@@ -23,6 +23,7 @@ a {
   text-decoration: none;
 }
 
+/* Header */
 .nav {
   display: -webkit-box;
   display: -moz-box;
@@ -30,15 +31,17 @@ a {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  /*flex-wrap: wrap;*/
   width: 100%;
-  height: 80px;
+  min-width: 300px;
+  min-height: 80px;
   background-color: #E0F2F1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 30px;
+  padding: 0 2em;
   color: #4AB29B;
   font-family: 'Libre Franklin', sans-serif;
   z-index: 5;
@@ -49,8 +52,11 @@ a {
 .nav__search {
   margin: 0;
   position: relative;
+
+  /*border: 1px solid green;*/
 }
 
+/* Header - name */
 .nav__name {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -66,11 +72,11 @@ a {
   font-weight: 700;
 }
 
-/* nav menu styles */
+/* Header - nav menu */
 .nav__menu {
   flex-grow: 1;
   text-align: center;
-  padding: 0 15%;
+  /*padding: 0 15%;*/
   text-transform: uppercase;
   height: inherit;
 }
@@ -82,7 +88,7 @@ a {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: inherit;
   padding: 0;
@@ -112,10 +118,9 @@ a {
   color: #00897B;
 }
 
-/* search div */
+/* Header - search div */
 .nav__search {
   /*flex-grow: 1;*/
-  position: relative;
   /*width: 15%;*/
   display: -webkit-box;
   display: -moz-box;
@@ -133,7 +138,7 @@ a {
   font-size: 0.9em;
   font-weight: 100;
   padding: 5px 3px;
-  width: 160px;
+  width: 10em;
   border: none;
   border-bottom: 3px solid;
   color: inherit;
@@ -175,11 +180,11 @@ a {
 
 
 /* search modal */
-#search_modal-checkbox {
+#search-modal-checkbox {
   display: none;
 }
 
-.nav__search-modal {
+.search-modal--filter {
   font-family: 'Libre Franklin', sans-serif;
   color: #4AB29B;
   visibility: hidden;
@@ -191,25 +196,26 @@ a {
   bottom: 0;
   margin: 0;
   width: 100%;
+  min-width: 300px;
   background-color: rgba(0,0,0,0.5);
   z-index: 10;
 
-  -webkit-transition: visibility .5s, opacity .5s;
-  -moz-transition: visibility .5s, opacity .5s;
-  -o-transition: visibility .5s, opacity .5s;
-  transition: visibility .5s, opacity .5s;
+  -webkit-transition: visibility .3s, opacity .3s;
+  -moz-transition: visibility .3s, opacity .3s;
+  -o-transition: visibility .3s, opacity .3s;
+  transition: visibility .3s, opacity .3s;
 }
 
-.nav__search-modal div {
-  position: absolute;
-  top: 100px;
+.search-modal__inner {
+  position: relative;
+  top: 12.5em;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 40%;
-  height: 300px;
+  height: 18.75em;
   background-color: #f2efe8;
-  padding: 20px;
+  padding: 1.25em;
 
   -webkit-transform: translateY(-100%) scale(0);
   -moz-transform: translateY(-100%) scale(0);
@@ -219,19 +225,19 @@ a {
   /* TODO: fire on page load, need JS?*/
   /* SOLVED: by adding an empty JS file to html*/
 
-  -webkit-transition: transform .5s;
-  -moz-transition: transform .5s;
-  -o-transition: transform .5s;
-  transition: transform .5s;
+  -webkit-transition: transform .25s;
+  -moz-transition: transform .25s;
+  -o-transition: transform .25s;
+  transition: transform .25s;
 }
 
-#search_modal-checkbox:checked ~ .nav__search-modal {
+#search-modal-checkbox:checked ~ .search-modal--filter {
   visibility: visible;
   opacity: 1;
   /* preventing animation firing on page load needs to be done with JS */
 }
 
-#search_modal-checkbox:checked ~ .nav__search-modal div {
+#search-modal-checkbox:checked ~ .search-modal--filter .search-modal__inner {
   -webkit-transform: translateY(0) scale(1);
   -moz-transform: translateY(0) scale(1);
   -ms-transform: translateY(0) scale(1);
@@ -239,31 +245,34 @@ a {
   transform: translateY(0) scale(1);
 }
 
-.nav__search-modal label {
+.search-modal__inner label {
   display: block;
-  float: right;
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
   cursor: pointer;
   margin-bottom: 30px;
 }
 
-.nav__search-modal p {
-  clear: right;
+.search-modal__inner > p {
   width: 100%;
-  margin: 0 auto;
+  margin-top: 3.5em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   font-size: 1.3em;
   font-weight: 500;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 
-.fa-close {
-  -webkit-transition: transform .5s, color .5s;
-  -moz-transition: transform .5s, color .5s;
-  -o-transition: transform .5s, color .5s;
-  transition: transform .5s, color .5s;
+.search-modal__inner .fa-close {
+  -webkit-transition: transform .3s, color .3s;
+  -moz-transition: transform .3s, color .3s;
+  -o-transition: transform .3s, color .3s;
+  transition: transform .3s, color .3s;
 }
 
-.fa-close:hover {
+.search-modal__inner .fa-close:hover {
   color: #00897B;
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
@@ -271,6 +280,26 @@ a {
   -o-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
 }
+
+.search-modal__device-width {
+  width: 100%;
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 100;
+  font-size: 0.9em;
+}
+
+.device--laptop,
+.device--tablet,
+.device--mobile {
+  display: none;
+}
+
+
+
 
 hr {
   margin: 150px auto 0;
@@ -292,6 +321,7 @@ hr {
 /* general section styles */
 .section {
   width: 100%;
+  min-width: 300px;
   margin: 0;
   padding-top: 150px;
   padding-bottom: 0;
@@ -784,7 +814,7 @@ div[class^='chart-bar--'] h4 {
   border-radius: 3px 3px 0 0;
   position: relative;
   bottom: 0;
-  /*cursor: help;*/
+  cursor: help;
 }
 
 .chart-bar__graph__bar:nth-of-type(1) {
@@ -1164,6 +1194,7 @@ div[class^='chart-bar--'] h4 {
 .footer {
   height: 50px;
   width: 100%;
+  min-width: 300px;
   background-color: #E0F2F1;
   color: #4AB29B;
   font-family: 'Libre Franklin', sans-serif;
@@ -1182,4 +1213,75 @@ div[class^='chart-bar--'] h4 {
 
 .fa-copyright {
   margin-right: 5px;
+}
+
+
+
+@media all and (max-width: 1024px){
+  .nav {
+   padding-left: 1.3em;
+   padding-right: 1.3em;
+  }
+
+  .nav__search {
+    font-size: 0.9em;
+  }
+
+  .search-modal__inner {
+    width: 55%;
+  }
+
+  .device--laptop {
+    display: block;
+  }
+
+  .device--laptop-l,
+  .device--tablet,
+  .device--mobile {
+    display: none;
+  }
+
+}
+
+@media all and (max-width: 768px){
+  /* off-screen nav menu */
+
+
+  .search-modal--filter {
+    font-size: 0.9em;
+  }
+
+  .search-modal__inner {
+    width: 65%;
+  }
+
+  .device--tablet {
+    display: block;
+  }
+
+  .device--laptop-l,
+  .device--laptop,
+  .device--mobile {
+    display: none;
+  }
+}
+
+@media all and (max-width: 360px){
+  .search-modal--filter {
+    font-size: 0.85em;
+  }
+
+  .search-modal__inner {
+    width: 75%;
+  }
+
+  .device--mobile {
+    display: block;
+  }
+
+  .device--laptop-l,
+  .device--laptop,
+  .device--tablet {
+    display: none;
+  }
 }

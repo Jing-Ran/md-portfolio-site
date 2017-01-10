@@ -38,21 +38,26 @@
       <input type="text" id="search_input" required>
       <label for="search_input" class="nav__search__label">search</label>
 
-      <label for="search_modal-checkbox" class="nav__search__label-modal" aria-label="search">
+      <label for="search-modal-checkbox" class="nav__search__label-modal" aria-label="search">
         <span class="fa fa-search fa-lg nav__search__icon" aria-hidden="true"></span>
       </label>
     </div>
   </header>
 
-  <input type="checkbox" id="search_modal-checkbox">
+  <input type="checkbox" id="search-modal-checkbox">
   <!-- search modal -->
-  <div class="nav__search-modal">
-    <div>
-      <!-- a close icon may be needed here -->
-      <label for="search_modal-checkbox" aria-label="close">
+  <div class="search-modal--filter">
+    <div class="search-modal__inner">
+      <label for="search-modal-checkbox" aria-label="close">
         <span class="fa fa-2x fa-close" aria-hidden="true"></span>
       </label>
       <p>Search Temporarily Disabled</p>
+      <div class="search-modal__device-width">
+        <p class="device--laptop-l">device width > 1024px</p>
+        <p class="device--laptop">768px < device width < 1024px</p>
+        <p class="device--tablet">360px < device width < 768px</p>
+        <p class="device--mobile">device width < 360px</p>
+      </div>
     </div>
   </div>
 
