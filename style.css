@@ -61,15 +61,16 @@ a {
 .hamburger__line {
   position: absolute;
   width: 100%;
-  height: 0;
-  border: 2px solid;
+  height: 2px;
+  /*border: 2px solid;*/
   border-radius: 5px;
+  background-color: #4AB29B;
 
-  -webkit-transition: transform 0.1s, color 0.1s;
-  -moz-transition: transform 0.1s, color 0.1s;
-  -ms-transition: transform 0.1s, color 0.1s;
-  -o-transition: transform 0.1s, color 0.1s;
-  transition: transform 0.1s, color 0.1s;
+  -webkit-transition: transform 0.1s, background-color 0.1s;
+  -moz-transition: transform 0.1s, background-color 0.1s;
+  -ms-transition: transform 0.1s, background-color 0.1s;
+  -o-transition: transform 0.1s, background-color 0.1s;
+  transition: transform 0.1s, background-color 0.1s;
 }
 
 .hamburger__line-top {
@@ -92,7 +93,7 @@ a {
 }
 
 .nav__hamburger:hover .hamburger__line {
-  color: #00897B;
+  background-color: #00897B;
 }
 
 .nav__hamburger:hover .hamburger__line-top {
