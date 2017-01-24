@@ -12,6 +12,11 @@
 </head>
 <body>
   <header class="nav">
+    <label class="nav__hamburger" for="off-canvas-cb">
+      <div class="hamburger__line hamburger__line-top"></div>
+      <div class="hamburger__line hamburger__line-mid"></div>
+      <div class="hamburger__line hamburger__line-btm"></div>
+    </label>
     <p class="nav__name">
       <span class="nav__name-first">Jing</span>
       <span class="nav__name-last">Ran</span>
@@ -44,8 +49,58 @@
     </div>
   </header>
 
-  <input type="checkbox" id="search-modal-checkbox">
+  <!-- Off-canvas nav menu -->
+  <input type="checkbox" id="off-canvas-cb">
+  <label class="off-canvas-filter" for="off-canvas-cb"></label>
+  <nav class="off-canvas">
+    <label class="off-canvas__close" for="off-canvas-cb">
+      <div class="line-top"></div>
+      <div class="line-mid"></div>
+      <div class="line-btm"></div>
+    </label>
+    <div class="off-canvas__header">
+      <span class="nav__name-first">Jing</span>
+      <span class="nav__name-last">Ran</span>
+    </div>
+    <ul class="off-canvas-menu">
+      <li class="off-canvas-menu__item" tabindex="0">
+        <a href="#about">about</a>
+      </li>
+      <li class="off-canvas-menu__item" tabindex="0">
+        <input type="checkbox" id="off-canvas-subm-cb">
+        <label class="off-canvas-submenu-open" for="off-canvas-subm-cb">
+          <span>projects</span>
+          <!--<div>-->
+            <!--<span class="off-canvas-submenu-open__1"></span>-->
+            <!--<span class="off-canvas-submenu-open__2"></span>-->
+          <!--</div>-->
+        </label>
+        <ul class="off-canvas-submenu">
+          <li>
+            <label for="pj-1">Buttons</label>
+          </li>
+          <li>
+            <label for="pj-2">Product Listing Page</label>
+          </li>
+        </ul>
+      </li>
+      <li class="off-canvas-menu__item" tabindex="0">
+        <a href="#skills">skills</a>
+      </li>
+      <li class="off-canvas-menu__item" tabindex="0">
+        <a href="#contact">contact</a>
+      </li>
+    </ul>
+    <div class="off-canvas__footer">
+      <span class="fa fa-copyright"></span>
+      <span>2016 Jing Ran</span>
+    </div>
+  </nav>
+
+
+
   <!-- search modal -->
+  <input type="checkbox" id="search-modal-checkbox">
   <div class="search-modal--filter">
     <div class="search-modal__inner">
       <label for="search-modal-checkbox" aria-label="close">
