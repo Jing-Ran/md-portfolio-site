@@ -234,6 +234,7 @@ a {
 .nav__search__label {
   position: absolute;
   left: 4px;
+  bottom: 5px;
   margin: auto;
   font-size: inherit;
 
@@ -1728,37 +1729,21 @@ div[class^='chart-bar--'] h4 {
 }
 
 @media all and (max-width: 500px){
-  .nav__search {
-    /*margin-right: 0;*/
+  .nav {
+    padding: 0 1em;
   }
-
-  /* header: nav hamburger */
-  .nav__menu {
-    display: none;
+  .nav__search {
+    font-size: 0.8em;
   }
 
   .nav__name {
     font-size: 1.3em;
   }
 
-  /* search modal */
-  .search-modal--filter {
-    font-size: 0.9em;
+  #search_input {
+    width: 6em;
   }
 
-  .search-modal__inner {
-    width: 65%;
-  }
-
-  .device--tablet {
-    display: block;
-  }
-
-  .device--laptop-l,
-  .device--laptop,
-  .device--mobile {
-    display: none;
-  }
 
   /* section in general */
   .section__intro {
