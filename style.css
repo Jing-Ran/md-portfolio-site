@@ -53,13 +53,15 @@ a {
   position: relative;
   display: none;
   margin-right: 20px;
-  width: 28px;
-  height: 26px;
+  width: 22px;
+  height: 18px;
   cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .hamburger__line {
-  position: absolute;
   width: 100%;
   height: 2px;
   /*border: 2px solid;*/
@@ -74,22 +76,27 @@ a {
 }
 
 .hamburger__line-top {
+  position: absolute;
   top: 0;
+  left: 0;
 }
 
 .hamburger__line-btm {
+  position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .hamburger__line-mid {
-  top: 50%;
-  left: 0;
+  /*position: relative;*/
+  /*top: 50%;*/
+  /*left: 0;*/
 
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  /*-webkit-transform: translateY(-50%);*/
+  /*-moz-transform: translateY(-50%);*/
+  /*-ms-transform: translateY(-50%);*/
+  /*-o-transform: translateY(-50%);*/
+  /*transform: translateY(-50%);*/
 }
 
 .nav__hamburger:hover .hamburger__line {
@@ -99,21 +106,21 @@ a {
 .nav__hamburger:hover .hamburger__line-top {
   transform-origin: right;
 
-  -webkit-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);
-  -moz-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);
-  -ms-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);
-  -o-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);
-  transform: translateY(13px) rotateZ(45deg) scaleX(0.6);
+  /*-webkit-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);*/
+  /*-moz-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);*/
+  /*-ms-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);*/
+  /*-o-transform: translateY(13px) rotateZ(45deg) scaleX(0.6);*/
+  transform: translateY(9px) rotateZ(45deg) scaleX(0.6);
 }
 
 .nav__hamburger:hover .hamburger__line-btm {
   transform-origin: right;
 
-  -webkit-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);
-  -moz-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);
-  -ms-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);
-  -o-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);
-  transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);
+  /*-webkit-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);*/
+  /*-moz-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);*/
+  /*-ms-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);*/
+  /*-o-transform: translateY(-13px) rotateZ(-45deg) scaleX(0.6);*/
+  transform: translateY(-9px) rotateZ(-45deg) scaleX(0.6);
 }
 
 
@@ -330,6 +337,8 @@ a {
   height: 18px;
 }
 
+
+/* TODO: fix off-canvas close button, line-top looks weird on gh pg */
 .off-canvas__close div {
   position: absolute;
   width: 100%;
@@ -1682,12 +1691,54 @@ div[class^='chart-bar--'] h4 {
   }
   
   .nav__hamburger {
-    display: block;
+    /*display: block;*/
+    display: flex;
+    /*flex-grow: 0;*/
   }
 
   .nav__name {
-    position: absolute;
-    left: calc(20px + 30px + 2em);
+    flex-grow: 1;
+    /*left: calc(20px + 30px + 2em);*/
+  }
+
+  /* search modal */
+  .search-modal--filter {
+    font-size: 0.9em;
+  }
+
+  .search-modal__inner {
+    width: 65%;
+  }
+
+  .device--tablet {
+    display: block;
+  }
+
+  .device--laptop-l,
+  .device--laptop,
+  .device--mobile {
+    display: none;
+  }
+
+  /* section in general */
+  .section__intro {
+    /*width: 70%;*/
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 500px){
+  .nav__search {
+    /*margin-right: 0;*/
+  }
+
+  /* header: nav hamburger */
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__name {
+    font-size: 1.3em;
   }
 
   /* search modal */
