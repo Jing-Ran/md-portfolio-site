@@ -1865,6 +1865,14 @@ div[class^='chart-bar--'] h4 {
 
 @media all and (max-width: 600px){
   /* Skills section */
+  .chart-line--frontend {
+    width: 87%;
+  }
+
+  .chart-line--backend {
+    width: 13%;
+  }
+
   .chart-bar__container {
     padding: 0 10px;
   }
@@ -1883,7 +1891,7 @@ div[class^='chart-bar--'] h4 {
 
 
 
-    /* Contact section: biz card*/
+  /* Contact section: biz card*/
   .card-wrapper {
     height: 400px;
   }
@@ -1950,6 +1958,11 @@ div[class^='chart-bar--'] h4 {
   }
 
   /* Skills section */
+  .skills__chart-line {
+    width: 100%;
+    font-size: 0.7em;
+  }
+
   div[class^='chart-bar--'] {
     width: 100%;
   }
@@ -1962,12 +1975,9 @@ div[class^='chart-bar--'] h4 {
     width: 23px;
   }
 
-  .category {
-    /*font-size: 0.6em;*/
-  }
 
 
-    /* contact section: biz card */
+  /* contact section: biz card */
   #contact .section__intro {
     font-size: 1.5em;
   }
