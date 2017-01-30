@@ -1117,6 +1117,7 @@ img[class^='carousel__slide-'],
 
 
 /* Skills section */
+
 /* line chart */
 .skills__chart-line {
   width: 70%;
@@ -1127,13 +1128,13 @@ img[class^='carousel__slide-'],
   display: -webkit-flex;
   display: flex;
   align-items: center;
+  font-size: 0.8em;
 }
 
 div[class^='chart-line--'] {
   margin: 0;
   padding: 5px 10px;
   color: white;
-  font-size: 0.8em;
 }
 
 .chart-line--frontend {
@@ -1170,7 +1171,7 @@ div[class^='chart-line--'] {
 }
 
 div[class^='chart-bar--'] {
-  width: 45%;
+  width: 50%;
   margin-bottom: 130px;
 }
 
@@ -1189,7 +1190,7 @@ div[class^='chart-bar--'] h4 {
 .chart-bar__container {
   width: 90%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1204,17 +1205,17 @@ div[class^='chart-bar--'] h4 {
   padding: 0;
   list-style: none;
   color: rgba(0,0,0,0.65);
+  font-size: 0.8em;
 }
 
 .chart-bar__y__label {
   text-align: right;
   margin-left: 0;
   margin-bottom: 50px;
-  font-size: 0.9em;
 }
 
 .chart-bar__graph {
-  width: 75%;
+  width: 80%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1226,35 +1227,46 @@ div[class^='chart-bar--'] h4 {
 }
 
 .chart-bar__graph__bar {
-  width: 35px;
+  width: 30px;
   height: 100%;
   margin-bottom: 0;
   padding: 0;
+  position: relative;
+  bottom: 0;
+}
+
+.chart-bar__graph__bar div {
+  width: 100%;
+  height: 100%;
+
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  position: relative;
-  bottom: 0;
+
   cursor: help;
 }
 
-.chart-bar__graph__bar:nth-of-type(1) {
+.chart-bar--other .chart-bar__graph__bar {
+  width: 27px;
+}
+
+.chart-bar__graph__bar:nth-of-type(1) div {
   background-color: #709288;
 }
 
-.chart-bar__graph__bar:nth-of-type(2) {
+.chart-bar__graph__bar:nth-of-type(2) div {
   background-color: #b7ccb6;
 }
 
-.chart-bar__graph__bar:nth-of-type(3) {
+.chart-bar__graph__bar:nth-of-type(3) div {
   background-color: #96a59a;
 }
 
-.chart-bar__graph__bar:nth-of-type(4) {
+.chart-bar__graph__bar:nth-of-type(4) div {
   background-color: #a3c7b6;
 }
 
-.chart-bar__graph__bar:nth-of-type(5) {
+.chart-bar__graph__bar:nth-of-type(5) div {
   background-color: #62a390;
 }
 
@@ -1280,17 +1292,19 @@ div[class^='chart-bar--'] h4 {
 
 .category {
   position: absolute;
+  left: -140px;
   bottom: -20px;
   width: 160px;
-  -webkit-transform: rotateZ(45deg);
-  -moz-transform: rotateZ(45deg);
-  -ms-transform: rotateZ(45deg);
-  -o-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-  transform-origin: top left;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+  transform-origin: bottom right;
   font-weight: 600;
   font-size: 0.7em;
-  text-align: left;
+  text-align: right;
+  cursor: default;
 }
 
 .chart-bar__graph__bar:nth-of-type(1) .category {
@@ -1328,12 +1342,13 @@ div[class^='chart-bar--'] h4 {
   color: #fff;
   font-size: 0.6em;
   font-weight: 100;
+  visibility: hidden;
   z-index: 3;
 
-  -webkit-transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-  -moz-transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-  -o-transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+  -webkit-transition: visibility 0s .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out;
+  -moz-transition: visibility 0s .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out;
+  -o-transition: visibility 0s .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out;
+  transition: visibility 0s .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out;
 }
 
 .tooltip::after {
@@ -1354,8 +1369,15 @@ div[class^='chart-bar--'] h4 {
   border-top: 10px solid rgba(0,0,0,0.7);
 }
 
-.chart-bar__graph__bar:hover .tooltip {
+.chart-bar__graph__bar div:hover + .tooltip {
   opacity: 1;
+  visibility: visible;
+
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
 
   -webkit-transform: translateY(-13px);
   -moz-transform: translateY(-13px);
@@ -1711,9 +1733,35 @@ div[class^='chart-bar--'] h4 {
     padding-top: 60px;
   }
 
+  .section__content {
+    width: 80%;
+  }
+
+  /* Skills section */
+  .skills__chart-line {
+    width: 75%;
+    max-width: 600px;
+  }
+
   hr {
     margin-top: 120px;
   }
+}
+
+@media all and (max-width: 900px){
+  /* Skills section */
+  .skills__chart-line {
+    width: 80%;
+  }
+
+  div[class^='chart-bar--'] {
+    width: 60%;
+  }
+
+  .chart-bar__container {
+    width: 100%;
+  }
+
 }
 
 @media all and (max-width: 768px){
@@ -1776,6 +1824,18 @@ div[class^='chart-bar--'] h4 {
   }
 
 
+  /* Skills section */
+  .skills__chart-line {
+    width: 90%;
+    font-size: 0.75em;
+  }
+
+
+  div[class^='chart-bar--'] {
+    width: 70%;
+  }
+
+
   /* contact section: biz card */
   .card-wrapper {
     height: 380px;
@@ -1804,6 +1864,26 @@ div[class^='chart-bar--'] h4 {
 }
 
 @media all and (max-width: 600px){
+  /* Skills section */
+  .chart-bar__container {
+    padding: 0 10px;
+  }
+
+  div[class^='chart-bar--'] {
+    width: 80%;
+  }
+
+  .chart-bar__y {
+    font-size: 0.7em;
+  }
+
+  .chart-bar__graph {
+    width: 90%;
+  }
+
+
+
+    /* Contact section: biz card*/
   .card-wrapper {
     height: 400px;
   }
@@ -1869,11 +1949,29 @@ div[class^='chart-bar--'] h4 {
     font-size: 1em;
   }
 
+  /* Skills section */
+  div[class^='chart-bar--'] {
+    width: 100%;
+  }
+
+  .chart-bar__graph__bar {
+    width: 27px;
+  }
+
+  .chart-bar--other .chart-bar__graph__bar {
+    width: 23px;
+  }
+
+  .category {
+    /*font-size: 0.6em;*/
+  }
+
+
+    /* contact section: biz card */
   #contact .section__intro {
     font-size: 1.5em;
   }
 
-  /* contact section: biz card */
   .card-wrapper {
     height: 420px;
   }
