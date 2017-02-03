@@ -1043,6 +1043,7 @@ img[class^='carousel__slide-'],
 
 .carousel__slide-live {
   padding: 0;
+  width: 100%;
 }
 
 .live-demo {
