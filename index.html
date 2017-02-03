@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Mastering CSS: Portfolio Site">
   <title>Jing Ran - Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/btn.css">
   <script type="text/javascript" src="script.js"></script>
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/icon_style.css">
@@ -156,6 +157,10 @@
 
       <div class="projects__tabs">
         <!-- Project 1 -->
+        <!--<label for="pj-1" class="projects__accordion-lb">-->
+          <!--Buttons-->
+          <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+        <!--</label>-->
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -196,7 +201,18 @@
               <img src="images/btn.png" class="carousel__slide-1">
               <img src="images/btn.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                Live demo goes here
+                <p>Live demo</p>
+                <div class="live-demo">
+                  <div class="btn btn-buy">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Buy Now
+                  </div>
+                  <button class="btn btn-mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>Send Mail</button>
+                  <a href="#?" class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i>Search</a>
+                  <div class="btn btn-sm">Small Button</div>
+                  <div class="btn btn-md">Medium Button</div>
+                  <div class="btn btn-lg">Large Button</div>
+                </div>
               </div>
             </div>
 
@@ -431,9 +447,9 @@
 
             <div class="carousel__slides">
               <img src="images/calculator.png" class="carousel__slide-1"
-                   style="width: 373px; height: auto">
+                   style="max-width: 300px; height: auto">
               <img src="images/calculator.gif" class="carousel__slide-2"
-                   style="width: 373px; height: auto">
+                   style="max-width: 300px; height: auto">
               <div class="carousel__slide-3 carousel__slide-live">
                 Live demo goes here
               </div>
