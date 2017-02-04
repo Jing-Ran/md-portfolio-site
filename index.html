@@ -7,6 +7,7 @@
   <title>Jing Ran - Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/btn.css">
+  <link rel="stylesheet" type="text/css" href="css/calculator.css">
   <script type="text/javascript" src="script.js"></script>
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/icon_style.css">
@@ -135,10 +136,10 @@
     <h3 class="section__title">Projects</h3>
     <p class="section__intro">I've built some web components and projects while studying at Modern Developer. More projects are coming. This section will be updated constantly. Stay tuned.</p>
     <div class="section__content section__content-projects">
-      <input type="radio" name="tabs" value="pj1" id="pj-1" checked>
+      <input type="radio" name="tabs" value="pj1" id="pj-1">
       <input type="radio" name="tabs" value="pj2" id="pj-2">
       <input type="radio" name="tabs" value="pj3" id="pj-3">
-      <input type="radio" name="tabs" value="pj4" id="pj-4">
+      <input type="radio" name="tabs" value="pj4" id="pj-4" checked>
       <input type="radio" name="tabs" value="pj5" id="pj-5">
       <input type="radio" name="tabs" value="pj6" id="pj-6">
       <input type="radio" name="tabs" value="pj7" id="pj-7">
@@ -202,7 +203,7 @@
               <img src="images/btn.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
                 <p>Live demo</p>
-                <div class="live-demo">
+                <div class="live-demo live-demo--btn">
                   <div class="btn btn-buy">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     Buy Now
@@ -369,10 +370,10 @@
             </div>
 
             <div class="carousel__slides">
-              <img src="images/form-card-info.gif" class="carousel__slide-1">
-              <img src="images/form-color.gif" class="carousel__slide-2">
+              <img src="images/form-card-info.png" class="carousel__slide-1">
+              <img src="images/form-billing.png" class="carousel__slide-2">
               <img src="images/form-schedule.png" class="carousel__slide-3">
-              <img src="images/form-login.gif" class="carousel__slide-4">
+              <img src="images/form-signup.png" class="carousel__slide-4">
             </div>
 
             <div class="carousel__nav-dots">
@@ -412,9 +413,9 @@
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
-            <input type="radio" name="slides-pj4" id="pj4-slide1" checked>
+            <input type="radio" name="slides-pj4" id="pj4-slide1">
             <input type="radio" name="slides-pj4" id="pj4-slide2">
-            <input type="radio" name="slides-pj4" id="pj4-slide3">
+            <input type="radio" name="slides-pj4" id="pj4-slide3" checked>
 
             <div class="carousel__nav-arrows">
               <label for="pj4-slide3" class="carousel__nav-prev carousel__nav1"
@@ -446,12 +447,55 @@
             </div>
 
             <div class="carousel__slides">
-              <img src="images/calculator.png" class="carousel__slide-1"
-                   style="max-width: 300px; height: auto">
-              <img src="images/calculator.gif" class="carousel__slide-2"
-                   style="max-width: 300px; height: auto">
+              <img src="images/calculator.png" class="carousel__slide-1">
+              <img src="images/calculator.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                Live demo goes here
+                <p>Live demo</p>
+                <div class="live-demo live-demo--calculator">
+                  <div class="main">
+                    <div class="screens">
+                      <input id="screen1" type="text" name="screen" placeholder="0" disabled>
+                      <input id="screenInput" type="text" name="screen" placeholder="0" autocomplete="off" disabled>
+                    </div>
+
+                    <div class="all-btns">
+                      <div class="row row1">
+                        <button class="btns col1 signs display-btns" value="(" id="left">(</button>
+                        <button class="btns col2 signs display-btns" value=")" id="right">)</button>
+                        <button class="btns col3 signs display-btns" value="." id="dot">•</button>
+                        <button class="btns col4 ops display-btns" value="/">÷</button>
+                      </div>
+
+                      <div class="row row2">
+                        <button class="btns col1 nums display-btns" value="7">7</button>
+                        <button class="btns col2 nums display-btns" value="8">8</button>
+                        <button class="btns col3 nums display-btns" value="9">9</button>
+                        <button class="btns col4 ops display-btns" value="*">×</button>
+                      </div>
+
+                      <div class="row row3">
+                        <button class="btns col1 nums display-btns" value="4">4</button>
+                        <button class="btns col2 nums display-btns" value="5">5</button>
+                        <button class="btns col3 nums display-btns" value="6">6</button>
+                        <button class="btns col4 ops display-btns" value="-">-</button>
+                      </div>
+
+                      <div class="row row4">
+                        <button class="btns col1 nums display-btns" value="1">1</button>
+                        <button class="btns col2 nums display-btns" value="2">2</button>
+                        <button class="btns col3 nums display-btns" value="3">3</button>
+                        <button class="btns col4 ops display-btns" value="+">+</button>
+                      </div>
+
+                      <div class="row row5">
+                        <button class="btns col1 signs" value="clear" id="clear">clear</button>
+                        <button class="btns col2 nums display-btns" value="0">0</button>
+                        <button class="btns col3 signs" value="delete" id="delete">del</button>
+                        <button class="btns col4 signs" value="=" id="equal">=</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1022,4 +1066,6 @@
     <span class="fa fa-copyright"></span>
     <span>2016 Jing Ran</span>
   </footer>
+
+  <script src="js/calculator/script.js"></script>
 </body>
