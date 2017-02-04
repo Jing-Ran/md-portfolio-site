@@ -1,0 +1,114 @@
+.live-demo--img-carousel {
+
+}
+
+.live-demo--img-carousel .img-gallery {
+  /*max-width: 800px;*/
+  margin: 0 auto;
+  width: 95%;
+  padding: 0;
+  position: relative;
+
+}
+
+
+.live-demo--img-carousel .img-gallery input[type='radio'] {
+  display: none;
+}
+
+.live-demo--img-carousel .thumbnails {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  z-index: 5;
+  opacity: 0.5;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
+  transition: opacity .5s ease-in-out;
+}
+
+.live-demo--img-carousel .thumbnails:hover {
+  opacity: 1;
+}
+
+.live-demo--img-carousel .thumbnails_item {
+  border: 5px solid rgba(0,0,0,0.7);
+  width: 6em;
+  height: 3.5em;
+  /*flex: 1;*/
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+}
+
+.live-demo--img-carousel .thumbnails_item img {
+  width: 100%;
+  opacity: 0.5;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
+  transition: opacity .5s ease-in-out;
+}
+
+.live-demo--img-carousel .thumbnails_item img:hover {
+  opacity: 1;
+}
+
+.live-demo--img-carousel .big-img-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
+  transition: opacity .8s ease-in-out;
+
+  height: auto;
+  max-height: 430px;
+}
+
+.live-demo--img-carousel .img-gallery input:checked + .big-img-item {
+  opacity: 1;
+}
+
+
+/*@media (max-width: 600px) {*/
+  /*.thumbnails_item {*/
+    /*border: 4px solid rgba(0,0,0,0.7);*/
+    /*width: 5.5em;*/
+    /*height: 3em;*/
+  /*}*/
+/*}*/
+
+/*@media (max-width: 500px) {*/
+  /*.thumbnails_item {*/
+    /*border: 3px solid rgba(0,0,0,0.7);*/
+    /*width: 4em;*/
+    /*height: 2.3em;*/
+  /*}*/
+/*}*/
+
+/*@media (max-width: 360px) {*/
+  /*.thumbnails {*/
+    /*top: 2px;*/
+    /*left: 2px;*/
+  /*}*/
+
+  /*.thumbnails_item {*/
+    /*border: 2px solid rgba(0,0,0,0.7);*/
+    /*width: 3em;*/
+    /*height: 1.75em;*/
+  /*}*/
+/*}*/
