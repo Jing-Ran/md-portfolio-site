@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/btn.css">
   <link rel="stylesheet" type="text/css" href="css/calculator.css">
+  <link rel="stylesheet" type="text/css" href="css/tabs.css">
   <script type="text/javascript" src="script.js"></script>
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/icon_style.css">
@@ -140,8 +141,8 @@
       <input type="radio" name="tabs" value="pj2" id="pj-2">
       <input type="radio" name="tabs" value="pj3" id="pj-3">
       <input type="radio" name="tabs" value="pj4" id="pj-4">
-      <input type="radio" name="tabs" value="pj5" id="pj-5" checked>
-      <input type="radio" name="tabs" value="pj6" id="pj-6">
+      <input type="radio" name="tabs" value="pj5" id="pj-5">
+      <input type="radio" name="tabs" value="pj6" id="pj-6" checked>
       <input type="radio" name="tabs" value="pj7" id="pj-7">
       <input type="radio" name="tabs" value="pj8" id="pj-8">
 
@@ -202,7 +203,7 @@
               <img src="images/btn.png" class="carousel__slide-1">
               <img src="images/btn.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                <p>Live demo</p>
+                <p>Live Demo</p>
                 <div class="live-demo live-demo--btn">
                   <div class="btn btn-buy">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -450,7 +451,7 @@
               <img src="images/calculator.png" class="carousel__slide-1">
               <img src="images/calculator.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                <p>Live demo</p>
+                <p>Live Demo</p>
                 <div class="live-demo live-demo--calculator">
                   <div class="main">
                     <div class="screens">
@@ -645,7 +646,51 @@
               <img src="images/tabs.png" class="carousel__slide-1">
               <img src="images/tabs.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                Live demo goes here
+                <p>Live Demo</p>
+                <div class="live-demo live-demo--tabs">
+                  <div class="tabComponent">
+                    <!-- Insert code to create tabbed components here -->
+                    <input type="radio" name="pj-tabs" value="home-decor" id="homeDecor" checked>
+                    <input type="radio" name="pj-tabs" value="furniture" id="furniture">
+                    <input type="radio" name="pj-tabs" value="kitchen" id="kitchen">
+                    <input type="radio" name="pj-tabs" value="clearance" id="clearance">
+
+                    <div class="tabs tabs-lg-screen">
+                      <label for="homeDecor">Home Decor</label>
+                      <label for="furniture">Furniture</label>
+                      <label for="kitchen">Kitchen</label>
+                      <label for="clearance">Clearance</label>
+                    </div>
+
+                    <div class="tabs tabs-sm-screen tabs-sm-screen-decor">
+                      <label for="homeDecor">Home Decor</label>
+                    </div>
+                    <div class="tab-content tab-content-decor">
+                      <p>Browse through our list of Home Decor Items</p>
+                    </div>
+
+                    <div class="tabs tabs-sm-screen tabs-sm-screen-furniture">
+                      <label for="furniture">Furniture</label>
+                    </div>
+                    <div class="tab-content tab-content-furniture">
+                      <p>Flash Sale on Living Room and Bedroom Furniture</p>
+                    </div>
+
+                    <div class="tabs tabs-sm-screen tabs-sm-screen-kitchen">
+                      <label for="kitchen">Kitchen</label>
+                    </div>
+                    <div class="tab-content tab-content-kitchen">
+                      <p>Bring the best out of the masterchef in you!!</p>
+                    </div>
+
+                    <div class="tabs tabs-sm-screen tabs-sm-screen-clearance">
+                      <label for="clearance">Clearance</label>
+                    </div>
+                    <div class="tab-content tab-content-clearance">
+                      <p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

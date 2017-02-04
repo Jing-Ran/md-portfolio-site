@@ -1057,9 +1057,6 @@ img[class^='carousel__slide-'],
   align-items: center;
 }
 
-.live-demo--btn {
-  flex-flow: column;
-}
 
 .carousel__nav-dots {
   position: absolute;
@@ -1142,6 +1139,10 @@ img[class^='carousel__slide-'],
 
 .projects__tabs__content__intro a:hover {
   color: #4AB29B;
+}
+
+.live-demo--btn {
+  flex-flow: column;
 }
 
 #projects .projects__tabs__content:nth-of-type(5) .carousel__slide-live a {
