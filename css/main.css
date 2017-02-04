@@ -1144,6 +1144,11 @@ img[class^='carousel__slide-'],
   color: #4AB29B;
 }
 
+#projects .projects__tabs__content:nth-of-type(5) .carousel__slide-live a {
+  color: #4AB29B;
+}
+
+
 
 /* Skills section */
 
@@ -1511,7 +1516,7 @@ div[class^='chart-bar--'] h4 {
 }
 
 .card__front {
-  background-image: url('images/front-bg.png');
+  background-image: url('../images/front-bg.png');
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1522,7 +1527,7 @@ div[class^='chart-bar--'] h4 {
 }
 
 .card__back {
-  background-image: url('images/back.jpg');
+  background-image: url('../images/back.jpg');
   -webkit-transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
   -ms-transform: rotateX(-180deg);
