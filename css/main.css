@@ -255,6 +255,12 @@ a {
   position: relative;
   margin-left: 5px;
   cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.nav__search__label-modal:hover {
+  color: #00897B;
 }
 
 
@@ -625,6 +631,16 @@ span[class^="off-canvas-submenu-open__"] {
   transition: visibility .4s, opacity .4s;
 }
 
+.search-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*background-color: #00BCD4;*/
+  /*opacity: 0.3;*/
+}
+
 .search-modal__inner {
   position: relative;
   top: 12.5em;
@@ -890,16 +906,42 @@ hr {
   overflow-y: auto;
 }
 
+.projects__nav--sm {
+  display: none;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.8em 1.25em;
+  border: 1px solid lightgray;
+  font-size: 0.9em;
+  /*color: rgba(0,0,0,0.6);*/
+  color: rgb(139, 139, 139);
+  background-color: rgba(250,250,250,0.7);
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.projects__nav--sm:hover {
+  color: #4AB29B;
+}
+
+.projects__nav--sm i {
+  font-size: 0.7em;
+  transition: transform 0.3s;
+}
+
 .projects__tabs {
   width: 75%;
-  /*flex-grow: 1;*/
 }
 
 .projects__nav label {
   display: block;
   padding: 15px 13px;
   margin: 0;
-  color: rgba(0,0,0,0.6);
+  /*color: rgba(0,0,0,0.6);*/
+  color: rgb(139, 139, 139);
   background-color: rgba(250,250,250,0.7);
   border-left: 3px solid transparent;
   font-size: 0.9em;
@@ -927,6 +969,7 @@ hr {
 
 }
 
+
 /* add more projects here */
 .section__content-projects > input:nth-of-type(1):checked ~ .projects__nav label:nth-of-type(1),
 .section__content-projects > input:nth-of-type(2):checked ~ .projects__nav label:nth-of-type(2),
@@ -941,6 +984,28 @@ hr {
   border-left: 3px solid #00897B;
 }
 
+.section__content-projects > input:nth-of-type(1):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(1),
+.section__content-projects > input:nth-of-type(2):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(2),
+.section__content-projects > input:nth-of-type(3):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(3),
+.section__content-projects > input:nth-of-type(4):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(4),
+.section__content-projects > input:nth-of-type(5):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(5),
+.section__content-projects > input:nth-of-type(6):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(6),
+.section__content-projects > input:nth-of-type(7):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(7),
+.section__content-projects > input:nth-of-type(8):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(8) {
+  color: #00897B;
+}
+
+.section__content-projects > input:nth-of-type(1):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(1) i,
+.section__content-projects > input:nth-of-type(2):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(2) i,
+.section__content-projects > input:nth-of-type(3):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(3) i,
+.section__content-projects > input:nth-of-type(4):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(4) i,
+.section__content-projects > input:nth-of-type(5):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(5) i,
+.section__content-projects > input:nth-of-type(6):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(6) i,
+.section__content-projects > input:nth-of-type(7):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(7) i,
+.section__content-projects > input:nth-of-type(8):checked ~ .projects__tabs .projects__nav--sm:nth-of-type(8) i {
+  transform: rotateZ(-180deg);
+}
+
 /* add more projects here */
 .section__content-projects > input:nth-of-type(1):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(1),
 .section__content-projects > input:nth-of-type(2):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(2),
@@ -953,6 +1018,7 @@ hr {
   display: block;
   background-color: rgba(238,238,238,0.8);
 }
+
 
 /* Projects section -- carousel */
 .carousel {
@@ -1011,7 +1077,7 @@ hr {
   /*border: 1px dashed #4AB29B;*/
 }
 
-.carousel__slides img {
+.carousel__slides > img {
   /*width: 540px;*/
   /*width: 100%;*/
   /*height: auto;*/
@@ -1045,6 +1111,11 @@ img[class^='carousel__slide-'],
 .carousel__slide-live {
   padding: 0;
   width: 100%;
+  /*display: flex;*/
+  /*flex-flow: column;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  font-size: 0.9em;
 }
 
 .live-demo {
@@ -1055,11 +1126,14 @@ img[class^='carousel__slide-'],
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
 .carousel__nav-dots {
   position: absolute;
+  /*top: 430px;*/
   bottom: 0;
   left: 0;
   right: 0;
@@ -1112,9 +1186,11 @@ img[class^='carousel__slide-'],
   right: 0;
   margin-bottom: 50px;
   padding: 0;
+  font-size: 0.9em;
 }
 
 .projects__tabs__content__intro h4 {
+  font-size: 0.9em;
   margin-top: 0;
 }
 
@@ -1124,7 +1200,13 @@ img[class^='carousel__slide-'],
   line-height: 1.2em;
 }
 
-.projects__tabs__content__intro a {
+.projects__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.projects__links a {
   color: rgba(0,0,0,0.5);
   font-size: 0.9em;
   -webkit-transition: color .3s;
@@ -1133,11 +1215,11 @@ img[class^='carousel__slide-'],
   transition: color .3s;
 }
 
-.projects__tabs__content__intro a:first-of-type {
+.projects__links a:first-of-type {
   margin-right: 50px;
 }
 
-.projects__tabs__content__intro a:hover {
+.projects__links a:hover {
   color: #4AB29B;
 }
 
@@ -1859,7 +1941,75 @@ div[class^='chart-bar--'] h4 {
   }
 
 
-  /* Skills section */
+  /* Projects section */
+  .projects__nav {
+    display: none;
+  }
+
+  .projects__nav--sm {
+    display: flex;
+  }
+
+  .projects__tabs {
+    width: 100%;
+  }
+
+  .projects__tabs__content {
+    display: block;
+    max-height: 0;
+    overflow-y: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: max-height 0.3s;
+  }
+
+  .section__content-projects > input:nth-of-type(1):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(1),
+  .section__content-projects > input:nth-of-type(2):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(2),
+  .section__content-projects > input:nth-of-type(3):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(3),
+  .section__content-projects > input:nth-of-type(4):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(4),
+  .section__content-projects > input:nth-of-type(5):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(5),
+  .section__content-projects > input:nth-of-type(6):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(6),
+  .section__content-projects > input:nth-of-type(7):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(7),
+  .section__content-projects > input:nth-of-type(8):checked ~ .projects__tabs .projects__tabs__content:nth-of-type(8) {
+    max-height: 800px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .carousel {
+    height: 400px;
+  }
+
+  .carousel__slides {
+    top: 20px;
+    height: 300px;
+    /*max-height: 400px;*/
+  }
+
+  .carousel__nav-arrows {
+    top: 30%;
+  }
+
+  .carousel__nav-dots {
+    top: 350px;
+    /*margin-top: 20px;*/
+  }
+
+  .carousel__slide-live {
+    max-height: 380px;
+  }
+  div.projects__tabs__content:nth-of-type(4) .carousel__nav-dots,
+  div.projects__tabs__content:nth-of-type(6) .carousel__nav-dots,
+  div.projects__tabs__content:nth-of-type(7) .carousel__nav-dots {
+    top: 400px;
+  }
+
+  .projects__tabs__content__intro {
+    top: 45px;
+  }
+
+
+    /* Skills section */
   .skills__chart-line {
     width: 90%;
     font-size: 0.75em;

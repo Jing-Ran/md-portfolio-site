@@ -108,6 +108,7 @@
   .live-demo--tabs .tabs-sm-screen {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-flow: column;
     width: 100%;
   }
@@ -151,6 +152,7 @@
   .live-demo--tabs .tabComponent input:nth-of-type(4):checked ~ .tab-content-clearance {
     max-height: 200px;
     padding: 20px;
+    font-size: 0.9em;
   }
 }
 

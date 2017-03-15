@@ -1,19 +1,18 @@
-.live-demo--img-carousel {
-
-}
-
 .live-demo--img-carousel .img-gallery {
-  /*max-width: 800px;*/
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
   padding: 0;
-  position: relative;
-
 }
 
 
 .live-demo--img-carousel .img-gallery input[type='radio'] {
   display: none;
+}
+
+.live-demo--img-carousel .img-gallery .img-gallery__inner {
+  width: 100%;
+  height: 300px;
+  position: relative;
 }
 
 .live-demo--img-carousel .thumbnails {
@@ -27,11 +26,11 @@
   align-content: center;
   z-index: 5;
   opacity: 0.5;
-  /*-webkit-transition: prop time;*/
-  /*-moz-transition: prop time;*/
-  /*-ms-transition: prop time;*/
-  /*-o-transition: prop time;*/
-  transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .live-demo--img-carousel .thumbnails:hover {
@@ -42,7 +41,6 @@
   border: 5px solid rgba(0,0,0,0.7);
   width: 6em;
   height: 3.5em;
-  /*flex: 1;*/
   cursor: pointer;
   display: flex;
   align-content: center;
@@ -51,15 +49,19 @@
 .live-demo--img-carousel .thumbnails_item img {
   width: 100%;
   opacity: 0.5;
-  /*-webkit-transition: prop time;*/
-  /*-moz-transition: prop time;*/
-  /*-ms-transition: prop time;*/
-  /*-o-transition: prop time;*/
-  transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .live-demo--img-carousel .thumbnails_item img:hover {
   opacity: 1;
+}
+
+.live-demo--img-carousel .big-imgs {
+  position: relative;
 }
 
 .live-demo--img-carousel .big-img-item {
@@ -69,11 +71,11 @@
   right: 0;
   width: 100%;
   opacity: 0;
-  /*-webkit-transition: prop time;*/
-  /*-moz-transition: prop time;*/
-  /*-ms-transition: prop time;*/
-  /*-o-transition: prop time;*/
-  transition: opacity .8s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 
   height: auto;
   max-height: 430px;

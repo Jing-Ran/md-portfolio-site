@@ -74,19 +74,31 @@
       </li>
       <li class="off-canvas-menu__item" tabindex="0">
         <input type="checkbox" id="off-canvas-subm-cb">
-        <label class="off-canvas-submenu-open" for="off-canvas-subm-cb">
-          <span>projects</span>
-          <!--<div>-->
-            <!--<span class="off-canvas-submenu-open__1"></span>-->
-            <!--<span class="off-canvas-submenu-open__2"></span>-->
-          <!--</div>-->
-        </label>
+        <label class="off-canvas-submenu-open" for="off-canvas-subm-cb">projects</label>
         <ul class="off-canvas-submenu">
           <li>
             <label for="pj-1">Buttons</label>
           </li>
           <li>
             <label for="pj-2">Product Listing Page</label>
+          </li>
+          <li>
+            <label for="pj-3">Form</label>
+          </li>
+          <li>
+            <label for="pj-4">Calculator</label>
+          </li>
+          <li>
+            <label for="pj-5">Business Card</label>
+          </li>
+          <li>
+            <label for="pj-6">Tab Component</label>
+          </li>
+          <li>
+            <label for="pj-7">Accordion</label>
+          </li>
+          <li>
+            <label for="pj-8">Image Carousel</label>
           </li>
         </ul>
       </li>
@@ -99,7 +111,7 @@
     </ul>
     <div class="off-canvas__footer">
       <span class="fa fa-copyright"></span>
-      <span>2016 Jing Ran</span>
+      <span>2017 Jing Ran</span>
     </div>
   </nav>
 
@@ -108,6 +120,7 @@
   <!-- search modal -->
   <input type="checkbox" id="search-modal-checkbox">
   <div class="search-modal--filter">
+    <label for="search-modal-checkbox" aria-label="close" class="search-modal__overlay"></label>
     <div class="search-modal__inner">
       <label for="search-modal-checkbox" aria-label="close">
         <span class="fa fa-2x fa-close" aria-hidden="true"></span>
@@ -128,7 +141,7 @@
     <div class="section__intro">
       <h1>Hello there.</h1>
       <p>I'm Jing, a <strong>frontend developer</strong> in progress.</p>
-      <p>I work in marketing. Part of my job is helping clients redesign web pages from a marketing perspective. However, as the complexity of the work increased, basic HTML and CSS knowledge was required. Then, I quickly discovered my passion in web development after taking some HTML/CSS courses online. I'm now a student of <a href="https://learn.moderndeveloper.com/" target="_blank">Modern Developer</a>. When I finish the frontend path, I'll continue pursuing my career as a <strong>fullstack developer</strong>.</p>
+      <p>I work in marketing. Part of my job is helping clients redesign web pages from a marketing perspective. However, as the complexity of the work increased, basic HTML and CSS knowledge was required. Then, I quickly discovered my passion in web development after taking some HTML/CSS courses online. I'm now a student of <a href="https://learn.moderndeveloper.com/" target="_blank">Bov Academy</a>. When I finish the frontend path, I'll continue pursuing my career as a <strong>fullstack developer</strong>.</p>
     </div>
   </section>
 
@@ -137,7 +150,7 @@
   <!-- Projects section -->
   <section id="projects" class="section">
     <h3 class="section__title">Projects</h3>
-    <p class="section__intro">I've built some web components and projects while studying at Modern Developer. More projects are coming. This section will be updated constantly. Stay tuned.</p>
+    <p class="section__intro">I've built some web components and projects while studying at Bov Academy. More projects are coming. This section will be updated constantly. Stay tuned.</p>
     <div class="section__content section__content-projects">
       <input type="radio" name="tabs" value="pj1" id="pj-1" checked>
       <input type="radio" name="tabs" value="pj2" id="pj-2">
@@ -161,11 +174,11 @@
 
       <div class="projects__tabs">
         <!-- Project 1 -->
-        <!--<label for="pj-1" class="projects__accordion-lb">-->
-          <!--Buttons-->
-          <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>-->
-        <!--</label>-->
-        <div class="projects__tabs__content">
+        <label for="pj-1" class="projects__nav--sm">
+          Buttons
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
+        <div class="projects__tabs__content" >
           <!-- Project Carousel -->
           <div class="carousel">
             <input type="radio" name="slides-pj1" id="pj1-slide1" checked>
@@ -239,18 +252,24 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>Simple and reusable button components.</p>
-            <a href="http://jing-ran.github.io/web-components/components/buttons/" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/web-components/tree/master/components/buttons" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="http://jing-ran.github.io/web-components/components/buttons/" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/web-components/tree/master/components/buttons" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 2 -->
+        <label for="pj-2" class="projects__nav--sm">
+          Product Listing Page
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -288,11 +307,9 @@
             </div>
 
             <div class="carousel__slides">
-              <img src="images/product.png" class="carousel__slide-1">
-              <img src="images/product.gif" class="carousel__slide-2">
-              <div class="carousel__slide-3 carousel__slide-live">
-                Live demo goes here
-              </div>
+              <img src="images/product-1.png" class="carousel__slide-1">
+              <img src="images/product-2.png" class="carousel__slide-2">
+              <img src="images/product.gif" class="carousel__slide-3">
             </div>
 
             <div class="carousel__nav-dots">
@@ -314,18 +331,24 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
             <p>A functional shopping page mock up. It can calculate and update prices by using vanilla JavaScript.</p>
-            <a href="https://jing-ran.github.io/md-product-listing/" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-product-listing" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-product-listing/" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-product-listing" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 3 -->
+        <label for="pj-3" class="projects__nav--sm">
+          Forms
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -401,24 +424,30 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5, CSS3, and VANILLA JAVASCRIPT</h4>
             <p>This project contains several forms. They are structured using HTML and CSS, and validated with JavaScript. Visit my GitHub for more of them.</p>
-            <a href="#" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-forms" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="#" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-forms" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 4 -->
+        <label for="pj-4" class="projects__nav--sm">
+          Calculator
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
-            <input type="radio" name="slides-pj4" id="pj4-slide1">
+            <input type="radio" name="slides-pj4" id="pj4-slide1" checked>
             <input type="radio" name="slides-pj4" id="pj4-slide2">
-            <input type="radio" name="slides-pj4" id="pj4-slide3" checked>
+            <input type="radio" name="slides-pj4" id="pj4-slide3">
 
             <div class="carousel__nav-arrows">
               <label for="pj4-slide3" class="carousel__nav-prev carousel__nav1"
@@ -521,18 +550,24 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>This calculator is designed based on my very first calculator when I was a kid.</p>
-            <a href="https://jing-ran.github.io/md-calculator/" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-calculator" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-calculator/" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-calculator" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 5 -->
+        <label for="pj-5" class="projects__nav--sm">
+          Business Card
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -595,19 +630,25 @@
 
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
-            <p>This Modern Developer Student business card is three-dimensional and flippable. It's build only with HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-business-card/my-card/" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-business-card/tree/master/my-card" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <p>This Bov Academy Student business card is three-dimensional and flippable. It's build only with HTML and CSS.</p>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-business-card/my-card/" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-business-card/tree/master/my-card" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 6 -->
+        <label for="pj-6" class="projects__nav--sm">
+          Tab Component
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -715,20 +756,26 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A simple and reusable tab component built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-tabs-component/"
-               target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-tabs-component"
-               target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-tabs-component/"
+                 target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-tabs-component"
+                 target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 7 -->
+        <label for="pj-7" class="projects__nav--sm">
+          Accordion
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -854,18 +901,24 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A simple and reusable accordion component built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-accordion/" target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-accordion" target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-accordion/" target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-accordion" target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Project 8 -->
+        <label for="pj-8" class="projects__nav--sm">
+          Image Carousel
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
         <div class="projects__tabs__content">
           <!-- Project Carousel -->
           <div class="carousel">
@@ -906,7 +959,60 @@
               <img src="images/img-carousel.png" class="carousel__slide-1">
               <img src="images/img-carousel.gif" class="carousel__slide-2">
               <div class="carousel__slide-3 carousel__slide-live">
-                Live demo goes here
+                <p>Live Demo</p>
+                <div class="live-demo live-demo--img-carousel">
+                  <div class="img-gallery">
+                    <div class="img-gallery__inner">
+                      <!-- Thumbnails at the top -->
+                      <div class="thumbnails">
+                        <label for="thumbnails_item_radio1" class="thumbnails_item">
+                          <img src="images/img-carousel-1.jpg">
+                        </label>
+                        <label for="thumbnails_item_radio2" class="thumbnails_item">
+                          <img src="images/img-carousel-2.jpg">
+                        </label>
+                        <label for="thumbnails_item_radio3" class="thumbnails_item">
+                          <img src="images/img-carousel-3.jpg">
+                        </label>
+                        <label for="thumbnails_item_radio4" class="thumbnails_item">
+                          <img src="images/img-carousel-2.jpg">
+                        </label>
+                        <label for="thumbnails_item_radio5" class="thumbnails_item">
+                          <img src="images/img-carousel-4.jpeg">
+                        </label>
+                      </div>
+
+                      <!-- HTML Code for Images linked to the thumbnails -->
+                      <div class="big-imgs">
+                        <!-- Image 1 -->
+                        <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio1" checked>
+                        <img src="images/img-carousel-1.jpg" class="big-img-item">
+
+                        <!-- Image 2
+                        URL: https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg
+                        -->
+                        <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio2">
+                        <img src="images/img-carousel-2.jpg" class="big-img-item">
+                        <!-- Image 3
+                        URL: https://static.pexels.com/photos/26796/pexels-photo.jpg
+                        -->
+                        <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio3">
+                        <img src="images/img-carousel-3.jpg" class="big-img-item">
+                        <!-- Image 4
+                        URL: https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg
+                        -->
+                        <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio4">
+                        <img src="images/img-carousel-2.jpg" class="big-img-item">
+
+                        <!-- Image 5
+                        URL: https://static.pexels.com/photos/116675/pexels-photo-116675.jpeg
+                        -->
+                        <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio5">
+                        <img src="images/img-carousel-4.jpeg" class="big-img-item">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -929,16 +1035,18 @@
           <div class="projects__tabs__content__intro">
             <h4>Technologies: HTML5 and CSS3</h4>
             <p>A reusable image carousel built with pure HTML and CSS.</p>
-            <a href="https://jing-ran.github.io/md-image-carousel/"
-               target="_blank">
-              <span class="fa fa-link" aria-hidden="true"></span>
-              View Demo
-            </a>
-            <a href="https://github.com/Jing-Ran/md-image-carousel"
-               target="_blank">
-              <span class="fa fa-github" aria-hidden="true"></span>
-              View Source on GitHub
-            </a>
+            <div class="projects__links">
+              <a href="https://jing-ran.github.io/md-image-carousel/"
+                 target="_blank">
+                <span class="fa fa-link" aria-hidden="true"></span>
+                View Demo
+              </a>
+              <a href="https://github.com/Jing-Ran/md-image-carousel"
+                 target="_blank">
+                <span class="fa fa-github" aria-hidden="true"></span>
+                View Source on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -951,7 +1059,7 @@
   <!-- Skills section -->
   <section id="skills" class="section">
     <h3 class="section__title">Skills</h3>
-    <p class="section__intro">The graphs below show the technologies and skills I've learned and been improved after attending Modern Developer's Frontend Path.</p>
+    <p class="section__intro">The graphs below show the technologies and skills I've learned and been improved after attending Bov Academy's Frontend Path.</p>
     <div class="section__content section__content-skills">
       <div class="skills__chart-line">
         <div class="chart-line--frontend" title="frontend development">90%</div>
@@ -1113,11 +1221,11 @@
             </label>
             <header class="card__front--header">
               <h1>Jing Ran</h1>
-              <h4>Student at Modern Developer</h4>
+              <h4>Student at Bov Academy</h4>
             </header>
 
             <div class="card__front--body">
-              <p>Enthusiastic frontend developer in progress at Modern Developer.</p>
+              <p>Enthusiastic frontend developer in progress at Bov Academy.</p>
               <div class="card__front--body__contact">
                 <p>
                   <span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -1173,7 +1281,7 @@
 
   <footer class="footer">
     <span class="fa fa-copyright"></span>
-    <span>2016 Jing Ran</span>
+    <span>2017 Jing Ran</span>
   </footer>
 
   <script src="js/calculator/script.js"></script>
