@@ -39,7 +39,7 @@
 
   function backToTop() {
     // document.documentElement for FireFox
-    if (document.body.scrollTop > ceiling || document.documentElement.scrollTop > ceiling) {
+    if (window.pageYOffset > ceiling) {
       window.scrollBy(0, -40);
       backTopTimer = window.setTimeout(backToTop, 10);
     } else {
@@ -50,7 +50,7 @@
 
   function fadeInOut() {
     // scrollTop is equal to or greater than 200px
-    if (document.body.scrollTop >= ceiling + 100 || document.documentElement.scrollTop >= ceiling + 100) {
+    if (window.pageYOffset >= 100) {
       backTopBtn.style.visibility = 'visible';
       backTopBtn.className = 'bt-fade-in';
     } else { // scrollTop is less than 100px
