@@ -1,4 +1,45 @@
 (function() {
+  /***************************************************************************
+   * Back-to-top Feature
+   ***************************************************************************/
+  var backTopBtn = document.getElementById("back-top");
+  var backTopTimer;
+
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -40);
+      backTopTimer = window.setTimeout(backToTop, 10);
+    } else {
+      window.clearTimeout(backTopTimer);
+    }
+    return false;
+  }
+
+  function fadeInOut() {
+    // scrollTop is equal to or greater than 100px
+    if (window.pageYOffset >= 100) {
+      backTopBtn.style.visibility = 'visible';
+      backTopBtn.className = 'bt-fade-in';
+    } else { // scrollTop is less than 100px
+      backTopBtn.className = 'bt-fade-out';
+    }
+  }
+
+  backTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    backToTop();
+  });
+
+  window.addEventListener('scroll', function(e) {
+    e.preventDefault();
+    fadeInOut();
+  });
+
+
+
+  /***************************************************************************
+   * Scroll-to Feature
+   ***************************************************************************/
   var navAbt = document.querySelector('.nav__menu [href="#about"]');
   var navPj = document.querySelector('.nav__menu [href="#projects]');
   var navSkl = document.querySelector('.nav__menu [href="#skills]');
@@ -28,44 +69,11 @@
   for (i = 0; i < navBtnsLen; i++) {
     // navBtns[i].addEventListener('click', scrollToSec);
   }
-  console.log('hello');
-})();
 
-// Back to top function
-(function () {
-  var backTopBtn = document.getElementById("back-top");
-  var backTopTimer;
-  var ceiling = 0;
 
-  function backToTop() {
-    // document.documentElement for FireFox
-    if (window.pageYOffset > ceiling) {
-      window.scrollBy(0, -40);
-      backTopTimer = window.setTimeout(backToTop, 10);
-    } else {
-      window.clearTimeout(backTopTimer);
-    }
-    return false;
-  }
 
-  function fadeInOut() {
-    // scrollTop is equal to or greater than 200px
-    if (window.pageYOffset >= 100) {
-      backTopBtn.style.visibility = 'visible';
-      backTopBtn.className = 'bt-fade-in';
-    } else { // scrollTop is less than 100px
-      backTopBtn.className = 'bt-fade-out';
-    }
-  }
-
-  backTopBtn.onclick = function () {
-    backToTop();
-    return false; // prevent browser default behaviors
-  };
-
-  window.onscroll = function () {
-    fadeInOut();
-    return false; // prevent browser default behaviors
-  };
+  /***************************************************************************
+   * Sidebar & Top nav bar
+   ***************************************************************************/
 
 })();
