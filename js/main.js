@@ -16,8 +16,8 @@
   }
 
   function fadeInOut() {
-    // scrollTop is equal to or greater than 100px
-    if (window.pageYOffset >= 100) {
+    // scrollTop > 100px
+    if (window.pageYOffset > 100) {
       backTopBtn.style.visibility = 'visible';
       backTopBtn.className = 'bt-fade-in';
     } else { // scrollTop is less than 100px
@@ -30,50 +30,126 @@
     backToTop();
   });
 
-  window.addEventListener('scroll', function(e) {
-    e.preventDefault();
-    fadeInOut();
-  });
 
 
 
   /***************************************************************************
    * Scroll-to Feature
    ***************************************************************************/
-  var navAbt = document.querySelector('.nav__menu [href="#about"]');
-  var navPj = document.querySelector('.nav__menu [href="#projects]');
-  var navSkl = document.querySelector('.nav__menu [href="#skills]');
-  var navCt = document.querySelector('.nav__menu [href="#contact]');
-  var navBtns = document.querySelectorAll('.nav__menu a');
-  var navBtnsArr = [].slice.call(navBtns);
-  var navBtnsLen = navBtns && navBtns.length || 0;
-  var i;
+  var topNavMenu = document.querySelector('.nav__menu ul');
+  var sideBarMenu = document.querySelector('.sidebar ul');
+  var offcanvasMenu = document.querySelector('.off-canvas-menu');
   //TODO: add off-canvas nav menu btns
-  var ocAbt = document.querySelector('.off-canvas-menu [href="#about"]');
-
-  var abtSec = document.querySelector('#about');
-  var pjSec = document.querySelector('#projects');
-  var sklSec = document.querySelector('#skills');
-  var ctSec = document.querySelector('#contact');
-
-  function scrollToSec() {
-    console.log('enter scrollTo func');
-    var secId = this.getAttribute('href');
-    var section = document.querySelector(secId);
-    var topPos = section.offsetTop;
 
 
+  function scrollTo(section) {
+    var currentPos = section.getBoundingClientRect().top;
+    var scrollByY = Math.abs(currentPos) / 10 >= 1 ? Math.abs(currentPos) / 10 : 1;
+    var viewportHeight = window.innerHeight;
+    var docHeight = Math.floor(
+      document.documentElement.getBoundingClientRect().height);
+    var timer;
+
+    if (currentPos > 0 && currentPos - scrollByY >= 0 &&
+      viewportHeight + window.pageYOffset < docHeight) {
+      console.log('if');
+      window.scrollBy(0, scrollByY);
+      timer = window.setTimeout(function () {
+        scrollTo(section);
+      }, 10);
+    } else if (currentPos < 0 && currentPos + scrollByY <= 0) {
+      console.log('else if');
+      window.scrollBy(0, -scrollByY);
+      timer = window.setTimeout(function () {
+        scrollTo(section);
+      }, 10);
+    } else {
+      console.log('else');
+      window.clearTimeout(timer);
+    }
   }
 
+  topNavMenu.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (e.target.tagName === 'A') {
+      var targetSec = document.querySelector(e.target.getAttribute('href'));
+      scrollTo(targetSec);
+    }
+  });
 
-  for (i = 0; i < navBtnsLen; i++) {
-    // navBtns[i].addEventListener('click', scrollToSec);
-  }
+  offcanvasMenu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      e.preventDefault();
+      var targetSec = document.querySelector(e.target.getAttribute('href'));
+      scrollTo(targetSec);
+    }
+    if (e.target.textContent === 'projects') {
+      document.querySelector('.off-canvas-submenu').classList.toggle('off-canvas-submenu--expand');
+    }
+  });
+
+  sideBarMenu.addEventListener('click', function (e) {
+    var targetSec;
+    e.preventDefault();
+    if (e.target.tagName === 'A') {
+      targetSec = document.querySelector(e.target.getAttribute('href'));
+    } else if (e.target.tagName === 'SPAN') {
+      targetSec =
+        document.querySelector(e.target.parentNode.getAttribute('href'));
+    } else {
+      return false;
+    }
+    scrollTo(targetSec);
+  });
 
 
 
   /***************************************************************************
    * Sidebar & Top nav bar
    ***************************************************************************/
+  var navBar = document.querySelector('.nav');
+  var sidebar = document.querySelector('.sidebar');
+  var lastPos = window.pageYOffset;
+
+  // for large screen: > 768px
+  function showOrHideNav() {
+    if (window.pageYOffset > 100) {
+      navBar.classList.add('nav--hide');
+      sidebar.classList.remove('sidebar--hide');
+    } else {
+      navBar.classList.remove('nav--hide');
+      sidebar.classList.add('sidebar--hide');
+    }
+  }
+
+  // for smaller screen: <= 768px
+  function showOrHideNavOnScroll(currentP) {
+    console.log('last ' + lastPos);
+    if (lastPos <= currentP) {
+      console.log('hide nav');
+      navBar.classList.add('nav--hide');
+    } else {
+      console.log('show nav');
+      navBar.classList.remove('nav--hide');
+    }
+    lastPos = currentP;
+    console.log('new last ' + lastPos);
+  }
+
+
+
+  window.addEventListener('scroll', function(e) {
+    e.preventDefault();
+    fadeInOut();
+    showOrHideNav();
+    if (window.innerWidth <= 786) {
+      showOrHideNavOnScroll(window.pageYOffset);
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    showOrHideNav();
+    fadeInOut();
+  });
 
 })();

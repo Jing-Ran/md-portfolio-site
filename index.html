@@ -19,10 +19,8 @@
 </head>
 <body id="top">
   <header class="nav">
-    <label class="nav__hamburger" for="off-canvas-cb">
-      <div class="hamburger__line hamburger__line-top"></div>
-      <div class="hamburger__line hamburger__line-mid"></div>
-      <div class="hamburger__line hamburger__line-btm"></div>
+    <label class="off-canvas__open" for="off-canvas-cb">
+      <i class="material-icons">menu</i>
     </label>
     <p class="nav__name">
       <span class="nav__name-first">Jing</span>
@@ -61,60 +59,55 @@
   <label class="off-canvas-filter" for="off-canvas-cb"></label>
   <nav class="off-canvas">
     <label class="off-canvas__close" for="off-canvas-cb">
-      <div class="line-top"></div>
-      <div class="line-mid"></div>
-      <div class="line-btm"></div>
-      <!--<i class="fa fa-arrow-left" aria-hidden="true"></i>-->
+      <i class="material-icons">highlight_off</i>
     </label>
     <div class="off-canvas__header">
       <span class="nav__name-first">Jing</span>
       <span class="nav__name-last">Ran</span>
     </div>
     <ul class="off-canvas-menu">
-      <li class="off-canvas-menu__item" tabindex="0">
-        <a href="#about">about</a>
-      </li>
-      <li class="off-canvas-menu__item" tabindex="0">
-        <input type="checkbox" id="off-canvas-subm-cb">
-        <label class="off-canvas-submenu-open" for="off-canvas-subm-cb">projects</label>
-        <ul class="off-canvas-submenu">
-          <li>
-            <label for="pj-1">Buttons</label>
-          </li>
-          <li>
-            <label for="pj-2">Product Listing Page</label>
-          </li>
-          <li>
-            <label for="pj-3">Form</label>
-          </li>
-          <li>
-            <label for="pj-4">Calculator</label>
-          </li>
-          <li>
-            <label for="pj-5">Business Card</label>
-          </li>
-          <li>
-            <label for="pj-6">Tab Component</label>
-          </li>
-          <li>
-            <label for="pj-7">Accordion</label>
-          </li>
-          <li>
-            <label for="pj-8">Image Carousel</label>
-          </li>
-        </ul>
-      </li>
-      <li class="off-canvas-menu__item" tabindex="0">
-        <a href="#skills">skills</a>
-      </li>
-      <li class="off-canvas-menu__item" tabindex="0">
-        <a href="#contact">contact</a>
-      </li>
-    </ul>
-    <div class="off-canvas__footer">
-      <span class="fa fa-copyright"></span>
-      <span>2017 Jing Ran</span>
-    </div>
+        <li class="off-canvas-menu__item" tabindex="0">
+          <a href="#about">about</a>
+        </li>
+        <li class="off-canvas-menu__item" tabindex="0">
+          <input type="checkbox" id="off-canvas-subm-cb">
+          <label class="off-canvas-submenu-open" for="off-canvas-subm-cb">
+            <a href="#projects">projects</a>
+          </label>
+          <ul class="off-canvas-submenu">
+            <li>
+              <label for="pj-1">Buttons</label>
+            </li>
+            <li>
+              <label for="pj-2">Product Listing Page</label>
+            </li>
+            <li>
+              <label for="pj-3">Form</label>
+            </li>
+            <li>
+              <label for="pj-4">Calculator</label>
+            </li>
+            <li>
+              <label for="pj-5">Business Card</label>
+            </li>
+            <li>
+              <label for="pj-6">Tab Component</label>
+            </li>
+            <li>
+              <label for="pj-7">Accordion</label>
+            </li>
+            <li>
+              <label for="pj-8">Image Carousel</label>
+            </li>
+          </ul>
+        </li>
+        <li class="off-canvas-menu__item" tabindex="0">
+          <a href="#skills">skills</a>
+        </li>
+        <li class="off-canvas-menu__item" tabindex="0">
+          <a href="#contact">contact</a>
+        </li>
+      </ul>
   </nav>
 
 
@@ -1293,25 +1286,25 @@
 
 
   <!-- Sidebar -->
-  <nav class="sidebar">
+  <nav class="sidebar sidebar--hide">
     <ul>
       <li class="sidebar__current">
-        <a href="#?">
+        <a href="#about">
           <span>About</span><span class="sidebar__dot"></span>
         </a>
       </li>
       <li>
-        <a href="#?">
+        <a href="#projects">
           <span>Projects</span><span class="sidebar__dot"></span>
         </a>
       </li>
       <li>
-        <a href="#?">
+        <a href="#skills">
           <span>Skills</span><span class="sidebar__dot"></span>
         </a>
       </li>
       <li>
-        <a href="#?">
+        <a href="#contact">
           <span>Contact</span><span class="sidebar__dot"></span>
         </a>
       </li>
