@@ -1,10 +1,20 @@
 (function() {
-  /***************************************************************************
-   * Back-to-top Feature
-   ***************************************************************************/
   var backTopBtn = document.getElementById("back-top");
   var backTopTimer;
 
+  var topNavMenu = document.querySelector('.nav__menu ul');
+  var sidebarMenu = document.querySelector('.sidebar ul');
+  var offCanvasMenu = document.querySelector('.off-canvas-menu');
+
+  var navBar = document.querySelector('.nav');
+  var sidebar = document.querySelector('.sidebar');
+  var lastPos = window.pageYOffset;
+
+  /***************************************************************************
+   * Back-to-top Feature
+   ***************************************************************************/
+
+  // back-to-top function
   function backToTop() {
     if (window.pageYOffset > 0) {
       window.scrollBy(0, -40);
@@ -15,34 +25,24 @@
     return false;
   }
 
+  // backTop button fade in or out
   function fadeInOut() {
-    // scrollTop > 100px
+    // pageYOffset > 100px
     if (window.pageYOffset > 100) {
       backTopBtn.style.visibility = 'visible';
       backTopBtn.className = 'bt-fade-in';
-    } else { // scrollTop is less than 100px
+    } else { // pageYOffset is less than 100px
       backTopBtn.className = 'bt-fade-out';
     }
   }
-
-  backTopBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    backToTop();
-  });
-
-
 
 
   /***************************************************************************
    * Scroll-to Feature
    ***************************************************************************/
-  var topNavMenu = document.querySelector('.nav__menu ul');
-  var sideBarMenu = document.querySelector('.sidebar ul');
-  var offcanvasMenu = document.querySelector('.off-canvas-menu');
-  //TODO: add off-canvas nav menu btns
-
 
   function scrollTo(section) {
+    console.log('scrollto func');
     var currentPos = section.getBoundingClientRect().top;
     var scrollByY = Math.abs(currentPos) / 10 >= 1 ? Math.abs(currentPos) / 10 : 1;
     var viewportHeight = window.innerHeight;
@@ -69,50 +69,17 @@
     }
   }
 
-  topNavMenu.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (e.target.tagName === 'A') {
-      var targetSec = document.querySelector(e.target.getAttribute('href'));
-      scrollTo(targetSec);
-    }
-  });
 
-  offcanvasMenu.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') {
-      e.preventDefault();
-      var targetSec = document.querySelector(e.target.getAttribute('href'));
-      scrollTo(targetSec);
-    }
-    if (e.target.textContent === 'projects') {
-      document.querySelector('.off-canvas-submenu').classList.toggle('off-canvas-submenu--expand');
-    }
-  });
-
-  sideBarMenu.addEventListener('click', function (e) {
-    var targetSec;
-    e.preventDefault();
-    if (e.target.tagName === 'A') {
-      targetSec = document.querySelector(e.target.getAttribute('href'));
-    } else if (e.target.tagName === 'SPAN') {
-      targetSec =
-        document.querySelector(e.target.parentNode.getAttribute('href'));
-    } else {
-      return false;
-    }
-    scrollTo(targetSec);
-  });
 
 
 
   /***************************************************************************
    * Sidebar & Top nav bar
    ***************************************************************************/
-  var navBar = document.querySelector('.nav');
-  var sidebar = document.querySelector('.sidebar');
-  var lastPos = window.pageYOffset;
 
-  // for large screen: > 768px
+  // Show or hide top navbar
   function showOrHideNav() {
+    console.log('show or hide');
     if (window.pageYOffset > 100) {
       navBar.classList.add('nav--hide');
       sidebar.classList.remove('sidebar--hide');
@@ -122,7 +89,8 @@
     }
   }
 
-  // for smaller screen: <= 768px
+  // Only for smaller screen: <= 768px
+  // When page onscroll: scroll down hide top navbar, scroll up show top navbar
   function showOrHideNavOnScroll(currentP) {
     console.log('last ' + lastPos);
     if (lastPos <= currentP) {
@@ -137,6 +105,50 @@
   }
 
 
+  /***************************************************************************
+   * Add Event Listeners
+   ***************************************************************************/
+
+  backTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    backToTop();
+  });
+
+  // Add scrollTo listener to topNavMenu
+  topNavMenu.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (e.target.tagName === 'A') {
+      var targetSec = document.querySelector(e.target.getAttribute('href'));
+      scrollTo(targetSec);
+    }
+  });
+
+  // Add scrollTo listener to offCanvasMenu
+  offCanvasMenu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      e.preventDefault();
+      var targetSec = document.querySelector(e.target.getAttribute('href'));
+      scrollTo(targetSec);
+    }
+    if (e.target.textContent === 'projects') {
+      document.querySelector('.off-canvas-submenu').classList.toggle('off-canvas-submenu--expand');
+    }
+  });
+
+  // Add scrollTo listener to sidebarMenu
+  sidebarMenu.addEventListener('click', function (e) {
+    var targetSec;
+    e.preventDefault();
+    if (e.target.tagName === 'A') {
+      targetSec = document.querySelector(e.target.getAttribute('href'));
+    } else if (e.target.tagName === 'SPAN') {
+      targetSec =
+        document.querySelector(e.target.parentNode.getAttribute('href'));
+    } else {
+      return false;
+    }
+    scrollTo(targetSec);
+  });
 
   window.addEventListener('scroll', function(e) {
     e.preventDefault();
@@ -148,8 +160,8 @@
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    showOrHideNav();
     fadeInOut();
+    showOrHideNav();
   });
 
 })();

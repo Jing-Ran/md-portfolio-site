@@ -1,1 +1,0 @@
-// An empty js file is added to prevent animations firing on page load
