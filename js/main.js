@@ -4,6 +4,7 @@
 
   var topNavMenu = document.querySelector('.nav__menu ul');
   var sidebarMenu = document.querySelector('.sidebar ul');
+  var allSidebarLis = sidebarMenu.querySelectorAll('li');
   var offCanvasMenu = document.querySelector('.off-canvas-menu');
 
   var navBar = document.querySelector('.nav');
@@ -22,6 +23,12 @@
     } else {
       window.clearTimeout(backTopTimer);
     }
+
+    for (var i = 0; i < allSidebarLis.length; i++) {
+      allSidebarLis[i].classList.remove('sidebar__current');
+    }
+    sidebarMenu.querySelector('li').classList.add('sidebar__current');
+
     return false;
   }
 
@@ -42,7 +49,8 @@
    ***************************************************************************/
 
   function scrollTo(section) {
-    console.log('scrollto func');
+    var currentSidebarA = sidebarMenu.querySelector('a[href="#' + section.getAttribute('id') + '"]');
+    console.log(currentSidebarA);
     var currentPos = section.getBoundingClientRect().top;
     var scrollByY = Math.abs(currentPos) / 10 >= 1 ? Math.abs(currentPos) / 10 : 1;
     var viewportHeight = window.innerHeight;
@@ -52,21 +60,24 @@
 
     if (currentPos > 0 && currentPos - scrollByY >= 0 &&
       viewportHeight + window.pageYOffset < docHeight) {
-      console.log('if');
       window.scrollBy(0, scrollByY);
       timer = window.setTimeout(function () {
         scrollTo(section);
       }, 10);
     } else if (currentPos < 0 && currentPos + scrollByY <= 0) {
-      console.log('else if');
       window.scrollBy(0, -scrollByY);
       timer = window.setTimeout(function () {
         scrollTo(section);
       }, 10);
     } else {
-      console.log('else');
       window.clearTimeout(timer);
     }
+
+    for (var i = 0; i < allSidebarLis.length; i++) {
+      allSidebarLis[i].classList.remove('sidebar__current');
+    }
+
+    currentSidebarA.parentNode.classList.add('sidebar__current');
   }
 
 
