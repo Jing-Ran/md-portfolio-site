@@ -605,6 +605,7 @@ hr {
 
 .section__intro {
   width: 65%;
+  max-width: 900px;
   padding-top: 50px;
   margin: 0 auto 0;
   line-height: 1.7em;
@@ -612,6 +613,7 @@ hr {
 
 .section__content {
   width: 70%;
+  max-width: 990px;
   margin: 50px auto 0;
 }
 
@@ -2278,6 +2280,11 @@ div[class^='chart-bar--'] h4 {
     flex-flow: row;
     margin-top: 1em;
   }
+
+  .random-fact {
+    width: 80%;
+    font-size: 0.9em;
+  }
 }
 
 @media all and (max-width: 500px){
@@ -2357,6 +2364,9 @@ div[class^='chart-bar--'] h4 {
     height: 33px;
   }
 
+  .random-fact__refresh-btn {
+    right: 0.5em;
+  }
 }
 
 @media all and (max-width: 360px){

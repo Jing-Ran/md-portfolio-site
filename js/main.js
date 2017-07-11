@@ -50,7 +50,6 @@
 
   function scrollTo(section) {
     var currentSidebarA = sidebarMenu.querySelector('a[href="#' + section.getAttribute('id') + '"]');
-    console.log(currentSidebarA);
     var currentPos = section.getBoundingClientRect().top;
     var scrollByY = Math.abs(currentPos) / 10 >= 1 ? Math.abs(currentPos) / 10 : 1;
     var viewportHeight = window.innerHeight;
@@ -90,7 +89,6 @@
 
   // Show or hide top navbar
   function showOrHideNav() {
-    console.log('show or hide');
     if (window.pageYOffset > 100) {
       navBar.classList.add('nav--hide');
       sidebar.classList.remove('sidebar--hide');
@@ -103,16 +101,12 @@
   // Only for smaller screen: <= 768px
   // When page onscroll: scroll down hide top navbar, scroll up show top navbar
   function showOrHideNavOnScroll(currentP) {
-    console.log('last ' + lastPos);
     if (lastPos <= currentP) {
-      console.log('hide nav');
       navBar.classList.add('nav--hide');
     } else {
-      console.log('show nav');
       navBar.classList.remove('nav--hide');
     }
     lastPos = currentP;
-    console.log('new last ' + lastPos);
   }
 
 

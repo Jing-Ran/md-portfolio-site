@@ -4,6 +4,7 @@
   padding: 0.5em 1.5em;
   margin: 5em auto;
   width: 60%;
+  max-width: 800px;
 }
 
 .random-fact__title {
@@ -14,6 +15,8 @@
 .random-fact__content {
   padding: 0.2em 0.3em;
   color: rgba(0,0,0,0.8);
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 .random-fact__refresh-btn {
