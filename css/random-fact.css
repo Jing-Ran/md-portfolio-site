@@ -1,0 +1,30 @@
+.random-fact {
+  position: relative;
+  background-color: rgba(238,238,238,0.8);
+  padding: 0.5em 1.5em;
+  margin: 5em auto;
+  width: 60%;
+}
+
+.random-fact__title {
+  color: #00897B;
+  font-size: 1.3em;
+}
+
+.random-fact__content {
+  padding: 0.2em 0.3em;
+  color: rgba(0,0,0,0.8);
+}
+
+.random-fact__refresh-btn {
+  position: absolute;
+  top: 0.7em;
+  right: 0.7em;
+  color: #4AB29B;
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+.random-fact__refresh-btn:hover {
+  color: #00897B;
+}
