@@ -24,10 +24,7 @@
       window.clearTimeout(backTopTimer);
     }
 
-    for (var i = 0; i < allSidebarLis.length; i++) {
-      allSidebarLis[i].classList.remove('sidebar__current');
-    }
-    sidebarMenu.querySelector('li').classList.add('sidebar__current');
+    toogleCurrentClass(sidebarMenu.querySelector('li'));
 
     return false;
   }
@@ -72,11 +69,38 @@
       window.clearTimeout(timer);
     }
 
+    toogleCurrentClass(currentSidebarA.parentNode);
+  }
+
+  function toogleCurrentClass(currentLi) {
     for (var i = 0; i < allSidebarLis.length; i++) {
       allSidebarLis[i].classList.remove('sidebar__current');
     }
+    currentLi.classList.add('sidebar__current');
+  }
 
-    currentSidebarA.parentNode.classList.add('sidebar__current');
+  function topPositionOfSections() {
+    var allSecs = document.querySelectorAll('.section');
+    var topPosArr = [];
+
+    for (var i = 0; i < allSecs.length; i++) {
+      topPosArr.push(allSecs[i].offsetTop);
+    }
+    return topPosArr;
+  }
+
+  function changeCurrentActiveLi() {
+    var posArr = topPositionOfSections();
+    var currentPos = window.pageYOffset;
+
+    for (var i = 0; i < posArr.length; i++) {
+      if (i < posArr.length - 1 && currentPos >= posArr[i] && currentPos < posArr[i + 1]) {
+        toogleCurrentClass(allSidebarLis[i]);
+        return;
+      } else if (i === posArr.length - 1) {
+        toogleCurrentClass(allSidebarLis[i]);
+      }
+    }
   }
 
 
@@ -162,11 +186,16 @@
     if (window.innerWidth <= 786) {
       showOrHideNavOnScroll(window.pageYOffset);
     }
+    changeCurrentActiveLi();
   });
 
   document.addEventListener('DOMContentLoaded', function() {
     fadeInOut();
     showOrHideNav();
   });
+
+  window.addEventListener('load', function () {
+    changeCurrentActiveLi();
+  })
 
 })();
