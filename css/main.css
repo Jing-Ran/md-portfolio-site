@@ -621,7 +621,7 @@ hr {
 /* About section */
 #about .section__intro  h1 {
   color: #4AB29B;
-  width: 150px;
+  max-width: 400px;
   -webkit-animation: bounce 1s ease-out 1s both;
   -o-animation: bounce 1s ease-out 1s both;
   animation: bounce 1s ease-out 1s both;
