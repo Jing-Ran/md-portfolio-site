@@ -4,7 +4,6 @@
 
   var allCookies = document.cookie;
   var welcomeMsg = document.querySelector('h1.welcome-msg');
-  var firstTimeVisit = false;
 
   function isFirstTime() {
     return allCookies.indexOf('visited=true') === -1;
