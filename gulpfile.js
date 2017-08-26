@@ -6,6 +6,7 @@ var minifyCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglifyJs = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 function handleError(err) {
   console.log(err.toString());
@@ -67,4 +68,11 @@ gulp.task('optimize-js', function () {
     .pipe(rename('scripts.min.js'))
     .pipe(uglifyJs()).on('error', handleError)
     .pipe(gulp.dest('dist'));
+});
+
+// Minify images
+gulp.task('optimize-img', function () {
+  return gulp.src('images/*')
+    .pipe(imagemin()).on('error', handleError)
+    .pipe(gulp.dest('dist/img'));
 });
