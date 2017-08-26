@@ -75,11 +75,11 @@
   max-height: 200px;
 }
 
-.pj-accordion li .accordion-content h3 {
+.pj-accordion .accordion-content h3 {
   color: #33001a;
 }
 
-.pj-accordion li .accordion-content h4 {
+.pj-accordion .accordion-content h4 {
   margin-bottom: 10px;
 }
 

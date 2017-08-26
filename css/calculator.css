@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-
 .live-demo--calculator * {
   font-family: 'Indie Flower', cursive;
 }
@@ -112,18 +110,6 @@
 
 .nums:hover {
   background-color: rgba(188,170,164,0.8);
-}
-
-.btns:active {
-	/*box-shadow: inset 0 0 30px rgb(48,35,29);*/
-}
-
-.ops:active {
-
-}
-
-.nums:active {
-	/*box-shadow: inset 0 0 30px rgba(109,76,65,0.8);*/
 }
 
 ::-webkit-input-placeholder {
