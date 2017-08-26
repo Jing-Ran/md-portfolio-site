@@ -196,6 +196,6 @@
 
   window.addEventListener('load', function () {
     changeCurrentActiveLi();
-  })
+  });
 
 })();

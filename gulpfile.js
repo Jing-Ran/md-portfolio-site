@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var htmlhint = require("gulp-htmlhint");
 var csslint = require('gulp-csslint');
+var jshint = require('gulp-jshint');
 
 function handleError(err) {
   console.log(err.toString());
@@ -24,4 +25,23 @@ gulp.task('csslint', function () {
     .pipe(csslint('csslintrc.json'))
     .pipe(csslint.formatter('compact'))
     .pipe(csslint.formatter('fail'));
+});
+
+
+// Lint JS
+gulp.task('jshint', function () {
+  return gulp.src('js/*.js')
+    .pipe(jshint({
+       undef: true,
+       browser: true,
+       globals: {
+         module: true,
+         require: true,
+         console: true
+       },
+       // Ignore eval() in calculator.js
+       evil: true
+     }))
+    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('fail'));
 });
