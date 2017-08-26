@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var htmlhint = require("gulp-htmlhint");
 var csslint = require('gulp-csslint');
 var jshint = require('gulp-jshint');
+var minifyCss = require('gulp-clean-css');
+var concat = require('gulp-concat');
 
 function handleError(err) {
   console.log(err.toString());
@@ -44,4 +46,13 @@ gulp.task('jshint', function () {
      }))
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'));
+});
+
+// Uglify & concatenate CSSs to min/
+// Change link in html
+gulp.task('optimize-css', function () {
+  return gulp.src('css/*.css')
+    .pipe(concat('main.min.css')).on('error', handleError)
+    .pipe(minifyCss()).on('error', handleError)
+    .pipe(gulp.dest('dist'));
 });
