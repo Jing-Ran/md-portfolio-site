@@ -24,7 +24,7 @@
       window.clearTimeout(backTopTimer);
     }
 
-    toogleCurrentClass(sidebarMenu.querySelector('li'));
+    toggleCurrentClass(sidebarMenu.querySelector('li'));
 
     return false;
   }
@@ -69,10 +69,10 @@
       window.clearTimeout(timer);
     }
 
-    toogleCurrentClass(currentSidebarA.parentNode);
+    toggleCurrentClass(currentSidebarA.parentNode);
   }
 
-  function toogleCurrentClass(currentLi) {
+  function toggleCurrentClass(currentLi) {
     for (var i = 0; i < allSidebarLis.length; i++) {
       allSidebarLis[i].classList.remove('sidebar__current');
     }
@@ -95,10 +95,10 @@
 
     for (var i = 0; i < posArr.length; i++) {
       if (i < posArr.length - 1 && currentPos >= posArr[i] && currentPos < posArr[i + 1]) {
-        toogleCurrentClass(allSidebarLis[i]);
+        toggleCurrentClass(allSidebarLis[i]);
         return;
       } else if (i === posArr.length - 1) {
-        toogleCurrentClass(allSidebarLis[i]);
+        toggleCurrentClass(allSidebarLis[i]);
       }
     }
   }
