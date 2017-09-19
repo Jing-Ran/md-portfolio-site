@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var htmlhint = require("gulp-htmlhint");
+var htmlhint = require('gulp-htmlhint');
 var csslint = require('gulp-csslint');
 var jshint = require('gulp-jshint');
 var minifyCss = require('gulp-clean-css');
