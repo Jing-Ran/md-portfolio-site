@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var htmlhint = require('gulp-htmlhint');
 var csslint = require('gulp-csslint');
@@ -7,6 +9,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglifyJs = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
+var babel = require('gulp-babel');
 
 function handleError(err) {
   console.log(err.toString());
@@ -45,7 +48,8 @@ gulp.task('jshint', function () {
          console: true
        },
        // Ignore eval() in calculator.js
-       evil: true
+       evil: true,
+       esversion: 6
      }))
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'));
@@ -65,7 +69,7 @@ gulp.task('optimize-css', function () {
 gulp.task('optimize-js', function () {
   return gulp.src('js/*.js')
     .pipe(concat('scripts.js')).on('error', handleError)
-    .pipe(rename('scripts.min.js'))
+    // .pipe(rename('scripts.min.js'))
     .pipe(uglifyJs()).on('error', handleError)
     .pipe(gulp.dest('dist'));
 });

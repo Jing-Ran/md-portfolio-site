@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
   var backTopBtn = document.getElementById("back-top");
   var backTopTimer;
 
@@ -72,7 +73,9 @@
     toggleCurrentClass(currentSidebarA.parentNode);
   }
 
+  // Toggle sidebar__current class for sidebar to indicate current section
   function toggleCurrentClass(currentLi) {
+    console.log('toggle');
     for (var i = 0; i < allSidebarLis.length; i++) {
       allSidebarLis[i].classList.remove('sidebar__current');
     }
@@ -94,10 +97,11 @@
     var currentPos = window.pageYOffset;
 
     for (var i = 0; i < posArr.length; i++) {
-      if (i < posArr.length - 1 && currentPos >= posArr[i] && currentPos < posArr[i + 1]) {
+      if (i < posArr.length - 1 && currentPos >= posArr[i] - 1 && currentPos < posArr[i + 1] - 1) { // not the last sec, & in between target sec & the
+        // next sec
         toggleCurrentClass(allSidebarLis[i]);
         return;
-      } else if (i === posArr.length - 1) {
+      } else if (i === posArr.length - 1) {// the last sec
         toggleCurrentClass(allSidebarLis[i]);
       }
     }
@@ -149,6 +153,8 @@
     if (e.target.tagName === 'A') {
       var targetSec = document.querySelector(e.target.getAttribute('href'));
       scrollTo(targetSec);
+      // console.log(sidebarMenu.querySelector('[href="#' + targetSec.id + '"]').parentNode);
+      toggleCurrentClass(sidebarMenu.querySelector('[href="#' + targetSec.id + '"]').parentNode);
     }
   });
 
