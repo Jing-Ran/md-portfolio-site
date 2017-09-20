@@ -9,6 +9,7 @@
     // var url = 'http://numbersapi.com/' + randomNum;
     var url = 'https://numbersapi.p.mashape.com/' + randomNum;
     var xhr = new XMLHttpRequest();
+    var key = 'cCRn3ndWPPmshXp3hZ6finUK92HIp10pB2sjsne4SUvAkUkoCz';
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -17,6 +18,7 @@
     };
 
     xhr.open('GET', url);
+    xhr.setRequestHeader('X-Mashape-Authorization', key);
     xhr.send();
   }
 
