@@ -6,7 +6,8 @@
 
   function getRandomFact() {
     var randomNum = Math.floor(Math.random() * 200);
-    var url = 'http://numbersapi.com/' + randomNum;
+    // var url = 'http://numbersapi.com/' + randomNum;
+    var url = 'https://numbersapi.p.mashape.com/' + randomNum;
     var xhr = new XMLHttpRequest();
 
     xhr.onload = function () {
