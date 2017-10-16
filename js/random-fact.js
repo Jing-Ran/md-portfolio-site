@@ -1,27 +1,26 @@
 (function () {
   'use strict';
 
-  var randomRactContent = document.querySelector('.random-fact__content');
-  var factRefreshBtn = document.querySelector('.random-fact__refresh-btn');
+  let randomRactContent = document.querySelector('.random-fact__content');
+  const FACT_REFRESH_BTN = document.querySelector('.random-fact__refresh-btn');
 
   function getRandomFact() {
-    var randomNum = Math.floor(Math.random() * 200);
-    // var url = 'http://numbersapi.com/' + randomNum;
-    var url = 'https://numbersapi.p.mashape.com/' + randomNum;
-    var xhr = new XMLHttpRequest();
-    var key = 'cCRn3ndWPPmshXp3hZ6finUK92HIp10pB2sjsne4SUvAkUkoCz';
+    const RANDOM_NUM = Math.floor(Math.random() * 200);
+    const URL = 'https://numbersapi.p.mashape.com/' + RANDOM_NUM;
+    const KEY = 'cCRn3ndWPPmshXp3hZ6finUK92HIp10pB2sjsne4SUvAkUkoCz';
+    let xhr = new XMLHttpRequest();
 
-    xhr.onload = function () {
+    xhr.onload = () => {
       if (xhr.status === 200) {
         randomRactContent.innerHTML = xhr.response;
       }
     };
 
-    xhr.open('GET', url);
-    xhr.setRequestHeader('X-Mashape-Authorization', key);
+    xhr.open('GET', URL);
+    xhr.setRequestHeader('X-Mashape-Authorization', KEY);
     xhr.send();
   }
 
   window.addEventListener('load', getRandomFact);
-  factRefreshBtn.addEventListener('click', getRandomFact);
+  FACT_REFRESH_BTN.addEventListener('click', getRandomFact);
 })();
