@@ -2,8 +2,8 @@
   // Add to cookie feature to remember return visitor
   'use strict';
 
-  var allCookies = document.cookie;
-  var welcomeMsg = document.querySelector('h1.welcome-msg');
+  let allCookies = document.cookie;
+  let welcomeMsg = document.querySelector('h1.welcome-msg');
 
   function isFirstTime() {
     return allCookies.indexOf('visited=true') === -1;
@@ -11,8 +11,8 @@
 
   function setCookie() {
     // Cookie will expire in 30 days after the first visit
-    var oneMonth = 60 * 60 * 24 * 30;
-    document.cookie = 'visited=true;max-age=' + oneMonth;
+    const ONE_MONTH = 60 * 60 * 24 * 30;
+    document.cookie = 'visited=true;max-age=' + ONE_MONTH;
   }
 
   function populateWelcomeMsg() {
