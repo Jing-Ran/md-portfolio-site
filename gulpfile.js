@@ -1,24 +1,19 @@
 'use strict';
 
-var gulp = require('gulp');
-var htmlhint = require('gulp-htmlhint');
-var csslint = require('gulp-csslint');
-var jshint = require('gulp-jshint');
-var minifyCss = require('gulp-clean-css');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglifyJs = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var babel = require('gulp-babel');
+let gulp = require('gulp');
+let htmlhint = require('gulp-htmlhint');
+let csslint = require('gulp-csslint');
+let jshint = require('gulp-jshint');
+let minifyCss = require('gulp-clean-css');
+let concat = require('gulp-concat');
+let rename = require('gulp-rename');
+let uglifyJs = require('gulp-uglify-es').default;
+let imagemin = require('gulp-imagemin');
 
 function handleError(err) {
   console.log(err.toString());
   process.exit(1);
 }
-
-gulp.task('default', function () {
-  console.log('Gulp has run');
-});
 
 // Validate HTML
 gulp.task('html', function () {
