@@ -64,7 +64,7 @@ gulp.task('optimize-css', function () {
 gulp.task('optimize-js', function () {
   return gulp.src('js/*.js')
     .pipe(concat('scripts.js')).on('error', handleError)
-    // .pipe(rename('scripts.min.js'))
+    .pipe(rename('scripts.min.js'))
     .pipe(uglifyJs()).on('error', handleError)
     .pipe(gulp.dest('dist'));
 });

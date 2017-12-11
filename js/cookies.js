@@ -16,6 +16,7 @@
   }
 
   function populateWelcomeMsg() {
+    console.log('populatewelcomemsg');
     if (isFirstTime()) {
       welcomeMsg.innerHTML = 'Welcome to my site';
       setCookie();

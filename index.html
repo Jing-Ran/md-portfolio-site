@@ -6,14 +6,14 @@
   <meta name="description" content="Mastering CSS: Portfolio Site">
   <title>Jing Ran - Portfolio</title>
 
-  <link rel="stylesheet" type="text/css" href="dist/main.min.css">
-
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Indie+Flower|Josefin+Sans:100,400,600,700|Libre+Franklin:100,400,500" rel="stylesheet">
 
   <link rel="stylesheet" href="fonts/icon_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="dist/main.min.css">
 </head>
 <body id="top">
   <header class="nav">
@@ -477,7 +477,7 @@
               <div class="carousel__slide-3 carousel__slide-live">
                 <p>Live Demo</p>
                 <div class="live-demo live-demo--calculator">
-                  <div class="main">
+                  <div class="main" id="calculator">
                     <div class="screens">
                       <input id="screen1" type="text" name="screen" placeholder="0" disabled>
                       <input id="screenInput" type="text" name="screen" placeholder="0" autocomplete="off" disabled>
@@ -1321,7 +1321,6 @@
     </ul>
   </nav>
 
-  <script src="dist/scripts.js"></script>
-
+  <script src="dist/scripts.min.js" async></script>
 </body>
 </html>

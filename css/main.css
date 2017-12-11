@@ -614,7 +614,7 @@ hr {
 
 
 /* About section */
-#about .section__intro  h1 {
+.welcome-msg {
   color: #4AB29B;
   max-width: 400px;
   -webkit-animation: bounce 1s ease-out 1s both;

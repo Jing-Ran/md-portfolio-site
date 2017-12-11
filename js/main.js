@@ -17,16 +17,11 @@
 
   // back-to-top function
   function backToTop() {
-    if (window.pageYOffset > 0) {
-      window.scrollBy(0, -40);
-      backTopTimer = window.setTimeout(backToTop, 10);
-    } else {
-      window.clearTimeout(backTopTimer);
-    }
-
+    window.scrollBy(0, -150);
     toggleCurrentClass(sidebarMenu.querySelector('li'));
-
-    return false;
+    if (window.pageYOffset > 0) {
+      requestAnimationFrame(backToTop);
+    }
   }
 
   // backTop button fade in or out
@@ -52,27 +47,28 @@
     const VIEWPORT_HEIGHT = window.innerHeight;
     const DOC_HEIGHT = Math.floor(
       document.documentElement.getBoundingClientRect().height);
-    // const CURRENT_SIDEBAR_A = sidebarMenu.querySelector('a[href="#' + section.getAttribute('id') + '"]');
     const CURRENT_SIDEBAR_A = sidebarMenu.querySelector(`a[href="#${section}.getAttribute('id')"]`);
-
-    let timer;
 
     if (CURRENT_POS > 0 && CURRENT_POS - SCROLL_BY_Y >= 0 &&
       VIEWPORT_HEIGHT + window.pageYOffset < DOC_HEIGHT) {
       window.scrollBy(0, SCROLL_BY_Y);
-      timer = window.setTimeout(function () {
-        scrollTo(section);
-      }, 10);
+      // timer = window.setTimeout(() => {
+      //   scrollTo(section);
+      // }, 10);
+      // requestAnimationFrame(scrollTo(section));
     } else if (CURRENT_POS < 0 && CURRENT_POS + SCROLL_BY_Y <= 0) {
       window.scrollBy(0, -SCROLL_BY_Y);
-      timer = window.setTimeout(function () {
-        scrollTo(section);
-      }, 10);
-    } else {
-      window.clearTimeout(timer);
+      // timer = window.setTimeout(() => {
+      //   scrollTo(section);
+      // }, 10);
+      // requestAnimationFrame(scrollTo(section));
     }
-
     toggleCurrentClass(CURRENT_SIDEBAR_A.parentNode);
+
+    requestAnimationFrame(scrollTo(section));
+    // else {
+    //   window.clearTimeout(timer);
+    // }
   }
 
   // Toggle sidebar__current class for sidebar to indicate current section
@@ -99,8 +95,7 @@
     const CURRENT_POS = window.pageYOffset;
 
     for (let i = 0; i < POS_ARR.length; i++) {
-      if (i < POS_ARR.length - 1 && CURRENT_POS >= POS_ARR[i] - 1 && CURRENT_POS < posArr[i + 1] - 1) { // not the last sec, & in between target sec & the
-        // next sec
+      if (i < POS_ARR.length - 1 && CURRENT_POS >= POS_ARR[i] - 1 && CURRENT_POS < POS_ARR[i + 1] - 1) { // not the last sec, & in between target sec & the next sec
         toggleCurrentClass(allSidebarLis[i]);
         return;
       } else if (i === POS_ARR.length - 1) {// the last sec
@@ -117,7 +112,7 @@
    * Sidebar & Top nav bar
    ***************************************************************************/
 
-  // Show or hide top navbar
+  // Show or hide top navbar and sidebar
   function showOrHideNav() {
     if (window.pageYOffset > 100) {
       navBar.classList.add('nav--hide');
